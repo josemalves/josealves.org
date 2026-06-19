@@ -1,0 +1,49 @@
+# === Site pessoal José Alves — repositório só de código ===
+# As mídias (fotos/vídeos/áudio) vivem no servidor; backup semanal lá.
+
+# Mídia — imagens, vídeos, áudio
+*.jpg
+*.jpeg
+*.png
+*.gif
+*.webp
+*.bmp
+*.ico
+*.mp4
+*.mov
+*.avi
+*.mkv
+*.mp3
+*.wav
+*.ogg
+
+# Exceção: manter o favicon vetorial (é código, leve)
+!favicon.svg
+
+# Pastas de mídia / binários
+Formacao/
+arcade/
+materiais/
+roms/
+motogp/oliveira/
+projectos/
+og-image.jpg
+
+# Arquivos comprimidos / ROMs / backups
+*.zip
+*.7z
+*.rar
+*.bak
+*.bak-*
+
+# Notas internas de sessão (não fazem parte da montra)
+conversa-sessao*.md
+
+# Documentação operacional interna (tunnel ID, SSH, deploy) — não expor
+SITE-DOCUMENTACAO.md
+
+# Ferramentas / sistema
+.claude/
+Thumbs.db
+desktop.ini
+.DS_Store

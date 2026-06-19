@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projeto Entreajuda | José Alves</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --accent-red: #e10600;
+            --accent-orange: #ff6b35;
+            --accent-yellow: #ffd700;
+            --accent-cyan: #00d4ff;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888aa;
+            --text-muted: #555570;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image:
+                linear-gradient(rgba(225, 6, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(225, 6, 0, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-red);
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid rgba(225, 6, 0, 0.4);
+            border-radius: 6px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .back-btn:hover {
+            background: rgba(225, 6, 0, 0.15);
+            border-color: var(--accent-red);
+            box-shadow: 0 0 20px rgba(225, 6, 0, 0.3);
+        }
+
+        /* Main Container */
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 30px 60px;
+        }
+
+        /* Highlight Banner */
+        .highlight-banner {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.8rem;
+            font-weight: 700;
+            color: var(--accent-yellow);
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.15), rgba(255, 107, 53, 0.1));
+            border: 1px solid rgba(255, 215, 0, 0.4);
+            padding: 8px 20px;
+            border-radius: 30px;
+            margin-bottom: 20px;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            animation: glow-pulse 2s ease-in-out infinite alternate;
+        }
+
+        @keyframes glow-pulse {
+            from { box-shadow: 0 0 10px rgba(255, 215, 0, 0.2); }
+            to { box-shadow: 0 0 25px rgba(255, 215, 0, 0.4); }
+        }
+
+        /* Event Header */
+        .event-header {
+            margin-bottom: 50px;
+        }
+
+        .event-date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-variant: small-caps;
+            margin-bottom: 12px;
+        }
+
+        .event-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .event-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+            margin-top: 20px;
+            border-radius: 2px;
+        }
+
+        /* Description Section */
+        .description-section {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 50px;
+        }
+
+        .description-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .description-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-bottom: 50px;
+        }
+
+        .video-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .video-container {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 0 40px rgba(255, 215, 0, 0.08), 0 0 80px rgba(225, 6, 0, 0.05);
+            transition: box-shadow 0.4s ease;
+        }
+
+        .video-container:hover {
+            box-shadow: 0 0 60px rgba(255, 215, 0, 0.15), 0 0 100px rgba(225, 6, 0, 0.1);
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
+        }
+
+        .page-footer p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-container {
+                padding: 90px 18px 40px;
+            }
+
+            .event-title {
+                font-size: 1.8rem;
+            }
+
+            .back-btn {
+                font-size: 0.65rem;
+                padding: 8px 14px;
+                top: 12px;
+                left: 12px;
+            }
+
+            .description-section {
+                padding: 22px;
+            }
+
+            .video-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="jose-site.html#percurso" class="back-btn">&#8592; Voltar ao Percurso</a>
+
+    <div class="page-container">
+
+        <div class="event-header">
+            <div class="highlight-banner">&#9733; DESTAQUE</div>
+            <p class="event-date">Setembro 2018</p>
+            <h1 class="event-title">Projeto Entreajuda</h1>
+        </div>
+
+        <div class="description-section">
+            <h2>Sobre o Evento</h2>
+            <p>Projeto social de formação e inclusão digital. Uma das experiências mais transformadoras do meu percurso como formador.</p>
+        </div>
+
+        <div class="video-section">
+            <h2>Vídeo</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="Formacao/2018_09 Projecto Entreajuda/JF--Projeto_ENTRAJUDA.mp4" type="video/mp4">
+                    O seu browser não suporta a reprodução de vídeo.
+                </video>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; 2025 José Alves</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>

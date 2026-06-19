@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dedicatória dos Alunos | José Alves</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --accent-red: #e10600;
+            --accent-orange: #ff6b35;
+            --accent-yellow: #ffd700;
+            --accent-cyan: #00d4ff;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888aa;
+            --text-muted: #555570;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-red), var(--accent-orange), var(--accent-yellow), var(--accent-red));
+            z-index: 1000;
+        }
+
+        .back-btn {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            padding: 14px 24px;
+            background: rgba(225,6,0,0.1);
+            border: 1px solid rgba(225,6,0,0.3);
+            border-radius: 4px;
+            color: var(--text-primary);
+            text-decoration: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            transition: background 0.3s;
+        }
+
+        .back-btn:hover {
+            background: rgba(225,6,0,0.2);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-header .date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-red);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .event-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .video-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: 1px;
+        }
+
+        .video-container {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(225,6,0,0.2);
+            padding: 0;
+            margin-bottom: 3rem;
+        }
+
+        .video-container video {
+            width: 100%;
+            display: block;
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 100px 1.5rem 3rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="jose-site.html#percurso" class="back-btn">&#8592; Voltar ao Percurso</a>
+
+    <main>
+        <div class="event-header">
+            <span class="date">Julho 2020</span>
+            <h1>Dedicatória dos Alunos</h1>
+        </div>
+
+        <p class="description">Em março de 2020 o mundo parou — e as salas de formação fecharam. Adaptar turmas inteiras ao formato 100% online, sem aviso prévio, não foi fácil. Exigiu dedicação, criatividade e muita persistência. Meses depois, os formandos surpreenderam com esta homenagem espontânea. Um vídeo que vale mil palavras e que mostra o impacto real da formação, mesmo à distância.</p>
+
+        <section class="video-section">
+            <h2>Vídeo</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="Formacao/2020_07_Dedicatoria/Video professor José.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2025 José Alves. Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>

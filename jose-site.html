@@ -1,0 +1,3852 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>José Alves | Engenheiro & Formador</title>
+<meta name="description" content="Formador certificado no IEFP com 10.000+ horas, engenheiro de sistemas embebidos e licenciado em Engenharia Eletrotécnica e de Computadores. Vila Nova de Gaia, Portugal.">
+<meta name="author" content="José Alves">
+<meta name="keywords" content="José Alves, formador, IEFP, engenheiro, sistemas embebidos, ESP32, Arduino, CCNA, Vila Nova de Gaia">
+
+<!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
+<meta property="og:type" content="website">
+<meta property="og:title" content="José Alves | Engenheiro & Formador">
+<meta property="og:description" content="Formador certificado no IEFP com 10.000+ horas, engenheiro de sistemas embebidos e licenciado em Engenharia Eletrotécnica e de Computadores.">
+<meta property="og:image" content="https://www.josealves.org/og-image.jpg">
+<meta property="og:url" content="https://www.josealves.org">
+<meta property="og:site_name" content="José Alves">
+<meta property="og:locale" content="pt_PT">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="José Alves | Engenheiro & Formador">
+<meta name="twitter:description" content="Formador certificado no IEFP com 10.000+ horas, engenheiro de sistemas embebidos e licenciado em Engenharia Eletrotécnica e de Computadores.">
+<meta name="twitter:image" content="https://www.josealves.org/og-image.jpg">
+
+<!-- Segurança -->
+<meta http-equiv="X-Content-Type-Options" content="nosniff">
+<meta http-equiv="upgrade-insecure-requests" content="1">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+
+<link rel="canonical" href="https://www.josealves.org/">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+
+<!-- Google Fonts (preconnect + non-blocking) -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+<!-- Schema.org / JSON-LD: Person -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "José Alves",
+  "alternateName": "José Silva Alves",
+  "url": "https://www.josealves.org",
+  "image": "https://www.josealves.org/foto_site.jpg",
+  "jobTitle": "Engenheiro de Sistemas Embebidos & Formador",
+  "description": "Formador certificado no IEFP com 10.000+ horas de formação, engenheiro de sistemas embebidos e licenciado em Engenharia Eletrotécnica e de Computadores.",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vila Nova de Gaia",
+    "addressCountry": "PT"
+  },
+  "email": "mail@josealves.org",
+  "alumniOf": {
+    "@type": "EducationalOrganization",
+    "name": "FCUP — Faculdade de Ciências da Universidade do Porto"
+  },
+  "knowsAbout": [
+    "Sistemas Embebidos",
+    "ESP32",
+    "Arduino",
+    "Redes Cisco",
+    "CCNA",
+    "Cibersegurança",
+    "Formação Profissional",
+    "PCB Design",
+    "3D Printing"
+  ],
+  "sameAs": [
+    "https://www.linkedin.com/in/josesilvaalves",
+    "https://www.instagram.com/jmsa.alves",
+    "https://github.com/josemalves"
+  ]
+}
+</script>
+<style>
+:root {
+  --bg-primary: #0a0a0f;
+  --bg-secondary: #12121a;
+  --bg-card: #1a1a25;
+  --accent-red: #e10600;
+  --accent-orange: #ff6b35;
+  --accent-yellow: #ffd700;
+  --accent-cyan: #00d4ff;
+  --accent-green: #00ff88;
+  --text-primary: #f0f0f5;
+  --text-secondary: #8888aa;
+  --text-muted: #555570;
+  --grid-line: rgba(255,255,255,0.03);
+  --glow-red: 0 0 30px rgba(225,6,0,0.3);
+  --glow-cyan: 0 0 30px rgba(0,212,255,0.3);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+/* Screen-reader only (acessibilidade) */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Rajdhani', sans-serif;
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  cursor: default;
+}
+
+/* === BACKGROUND GRID === */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image: 
+    linear-gradient(var(--grid-line) 1px, transparent 1px),
+    linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
+  background-size: 60px 60px;
+  z-index: 0;
+  pointer-events: none;
+}
+
+/* === RACING STRIPE === */
+body::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-red), var(--accent-orange), var(--accent-yellow), var(--accent-red));
+  z-index: 1000;
+}
+
+/* === SCROLLBAR === */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-primary); }
+::-webkit-scrollbar-thumb { background: var(--accent-red); border-radius: 3px; }
+
+/* === NAV === */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: rgba(10,10,15,0.85);
+  backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(225,6,0,0.2);
+  padding: 0 2rem;
+  transition: all 0.3s ease;
+}
+
+nav.scrolled {
+  padding: 0 2rem;
+  background: rgba(10,10,15,0.95);
+}
+
+.nav-inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 70px;
+}
+
+.nav-logo {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 800;
+  letter-spacing: 2px;
+  color: var(--text-primary);
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.nav-logo .dot {
+  width: 10px;
+  height: 10px;
+  background: var(--accent-red);
+  border-radius: 50%;
+  animation: pulse-dot 2s infinite;
+}
+
+@keyframes pulse-dot {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(225,6,0,0.7); }
+  50% { box-shadow: 0 0 0 8px rgba(225,6,0,0); }
+}
+
+.nav-links {
+  display: flex;
+  gap: 0;
+  list-style: none;
+}
+
+.nav-links a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 25px 18px;
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+  color: var(--text-primary);
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 2px;
+  background: var(--accent-red);
+  transition: width 0.3s;
+}
+
+.nav-links a:hover::after,
+.nav-links a.active::after {
+  width: 60%;
+}
+
+.nav-toggle {
+  display: none;
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+/* === HERO SECTION === */
+#hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+  padding: 2rem;
+}
+
+.hero-bg-elements {
+  position: absolute;
+  inset: 0;
+  overflow: hidden;
+}
+
+.circuit-line {
+  position: absolute;
+  background: var(--accent-red);
+  opacity: 0.1;
+}
+
+.circuit-line:nth-child(1) {
+  width: 200px; height: 1px;
+  top: 30%; right: 10%;
+  animation: circuit-glow 4s infinite;
+}
+
+.circuit-line:nth-child(2) {
+  width: 1px; height: 150px;
+  top: 25%; right: calc(10% + 200px);
+  animation: circuit-glow 4s infinite 1s;
+}
+
+.circuit-line:nth-child(3) {
+  width: 300px; height: 1px;
+  bottom: 35%; left: 5%;
+  animation: circuit-glow 4s infinite 2s;
+}
+
+.circuit-line:nth-child(4) {
+  width: 1px; height: 200px;
+  bottom: 35%; left: calc(5% + 300px);
+  animation: circuit-glow 4s infinite 0.5s;
+}
+
+.circuit-line:nth-child(5) {
+  width: 150px; height: 1px;
+  top: 60%; right: 30%;
+  animation: circuit-glow 4s infinite 1.5s;
+}
+
+@keyframes circuit-glow {
+  0%, 100% { opacity: 0.05; }
+  50% { opacity: 0.25; box-shadow: 0 0 10px rgba(225,6,0,0.3); }
+}
+
+.hero-content {
+  text-align: center;
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(225,6,0,0.1);
+  border: 1px solid rgba(225,6,0,0.3);
+  border-radius: 50px;
+  padding: 8px 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--accent-red);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  animation: fadeInUp 1s ease;
+}
+
+.hero-badge::before {
+  content: '●';
+  animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.3; }
+}
+
+.hero-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 900;
+  line-height: 1.1;
+  margin-bottom: 0.5rem;
+  background: linear-gradient(135deg, var(--text-primary) 0%, var(--text-secondary) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: fadeInUp 1s ease 0.2s both;
+}
+
+.hero-title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: clamp(1.1rem, 2.5vw, 1.6rem);
+  font-weight: 300;
+  color: var(--text-secondary);
+  margin-bottom: 2rem;
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  animation: fadeInUp 1s ease 0.4s both;
+}
+
+.hero-title span {
+  color: var(--accent-red);
+  font-weight: 600;
+}
+
+.hero-stats {
+  display: flex;
+  justify-content: center;
+  gap: 3rem;
+  margin-bottom: 2.5rem;
+  animation: fadeInUp 1s ease 0.6s both;
+}
+
+.hero-stat {
+  text-align: center;
+}
+
+.hero-stat-number {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--accent-red);
+  display: block;
+}
+
+.hero-stat-label {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  animation: fadeInUp 1s ease 0.8s both;
+}
+
+.btn {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 14px 32px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.btn-primary {
+  background: var(--accent-red);
+  color: white;
+}
+
+.btn-primary:hover {
+  background: #ff1a14;
+  box-shadow: var(--glow-red);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  background: transparent;
+  color: var(--text-primary);
+  border: 1px solid rgba(255,255,255,0.2);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-cyan);
+  color: var(--accent-cyan);
+  box-shadow: var(--glow-cyan);
+  transform: translateY(-2px);
+}
+
+/* === SCROLL INDICATOR === */
+.scroll-indicator {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  animation: fadeInUp 1s ease 1s both;
+}
+
+.scroll-indicator span {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--text-muted);
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.scroll-line {
+  width: 1px;
+  height: 40px;
+  background: linear-gradient(180deg, var(--accent-red), transparent);
+  animation: scroll-pulse 2s infinite;
+}
+
+@keyframes scroll-pulse {
+  0% { transform: scaleY(0); transform-origin: top; }
+  50% { transform: scaleY(1); transform-origin: top; }
+  51% { transform: scaleY(1); transform-origin: bottom; }
+  100% { transform: scaleY(0); transform-origin: bottom; }
+}
+
+@keyframes fadeInUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* === SECTIONS === */
+section {
+  position: relative;
+  z-index: 1;
+  padding: 6rem 2rem;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.section-tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent-red);
+  letter-spacing: 4px;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.section-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* === ABOUT SECTION === */
+#about {
+  background: linear-gradient(180deg, var(--bg-primary), var(--bg-secondary));
+}
+
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.about-photo {
+  position: relative;
+}
+
+.photo-frame {
+  width: 100%;
+  max-width: 400px;
+  aspect-ratio: 3/4;
+  background: var(--bg-card);
+  border: 1px solid rgba(225,6,0,0.2);
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.photo-frame::before {
+  content: '';
+  position: absolute;
+  top: -1px;
+  left: 20%;
+  width: 60%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+}
+
+.photo-placeholder {
+  font-size: 6rem;
+  opacity: 0.3;
+  color: var(--accent-red);
+}
+
+.photo-overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 2px;
+}
+
+.about-info h2 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  font-weight: 700;
+}
+
+.about-info p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.8;
+  margin-bottom: 1.5rem;
+  text-align: justify;
+}
+
+.about-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2rem;
+  justify-content: space-between;
+}
+
+.tag {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  padding: 8px 18px;
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 4px;
+  color: var(--text-secondary);
+  letter-spacing: 1px;
+  transition: all 0.3s;
+  flex-grow: 1;
+  text-align: center;
+}
+
+.tag:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+  background: rgba(225,6,0,0.05);
+}
+
+/* === SKILLS SECTION === */
+#skills {
+  background: var(--bg-secondary);
+}
+
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.skill-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.4s;
+}
+
+.skill-card:hover {
+  border-color: rgba(225,6,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+}
+
+.skill-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, var(--accent-red), transparent);
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.skill-card:hover::before { opacity: 1; }
+
+.skill-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.skill-card h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.skill-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.skill-bar {
+  margin-top: 1rem;
+  height: 3px;
+  background: rgba(255,255,255,0.05);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.skill-bar-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+  border-radius: 2px;
+  transition: width 1.5s ease;
+}
+
+/* === MOTOGP SECTION === */
+#motogp {
+  background: var(--bg-primary);
+  position: relative;
+  overflow: hidden;
+}
+
+.motogp-bg {
+  position: absolute;
+  inset: 0;
+  background: 
+    radial-gradient(ellipse at 80% 50%, rgba(225,6,0,0.08) 0%, transparent 60%),
+    radial-gradient(ellipse at 20% 80%, rgba(255,107,53,0.05) 0%, transparent 50%);
+}
+
+.motogp-content {
+  position: relative;
+  z-index: 2;
+}
+
+/* Oliveira tribute */
+.oliveira-tribute {
+  background: var(--bg-card);
+  border: 1px solid rgba(225,6,0,0.2);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 3rem;
+  padding: 2rem;
+  position: relative;
+}
+
+.oliveira-tribute::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, #006600, #ff0000, #006600);
+}
+
+.oliveira-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.oliveira-flag {
+  font-size: 2.5rem;
+}
+
+.oliveira-name {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.2rem;
+}
+
+.oliveira-tagline {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.oliveira-victories {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 0.8rem;
+}
+
+.victory-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  cursor: pointer;
+}
+
+.victory-img {
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-position: center;
+  background-color: #1a1a2e;
+  transition: transform 0.5s;
+}
+
+.victory-fallback {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  font-size: 1.5rem;
+  line-height: 1.4;
+  color: rgba(255,255,255,0.2);
+  background: linear-gradient(135deg, #0a2e0a 0%, #1a1a2e 50%, #2e0a0a 100%);
+}
+
+/* Fallback hidden via JS when image loads (class added dynamically) */
+.victory-img.has-photo .victory-fallback {
+  display: none;
+}
+
+.victory-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.2) 100%);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 1rem 0.8rem;
+  opacity: 0;
+  transition: opacity 0.4s;
+}
+
+.victory-card:hover .victory-overlay {
+  opacity: 1;
+}
+
+.victory-card:hover .victory-img {
+  transform: scale(1.1);
+}
+
+.victory-overlay .victory-flag {
+  font-size: 1.3rem;
+  margin-bottom: 0.3rem;
+}
+
+.victory-overlay h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 1px;
+  color: var(--accent-yellow);
+  margin-bottom: 0.2rem;
+}
+
+.victory-overlay p {
+  font-size: 0.75rem;
+  color: var(--text-primary);
+  margin-bottom: 0.3rem;
+}
+
+.victory-detail {
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  line-height: 1.3;
+}
+
+/* Standings table */
+.standings-block {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  margin-bottom: 3rem;
+  overflow-x: auto;
+}
+
+.standings-block h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-red);
+  letter-spacing: 2px;
+}
+
+.standings-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.standings-table th {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.65rem;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  color: var(--text-muted);
+  padding: 0.6rem 0.8rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(225,6,0,0.2);
+}
+
+.standings-table td {
+  padding: 0.7rem 0.8rem;
+  font-size: 0.85rem;
+  border-bottom: 1px solid rgba(255,255,255,0.03);
+}
+
+.standings-table tr:hover td {
+  background: rgba(225,6,0,0.04);
+}
+
+.standings-table .pos {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--accent-red);
+  width: 40px;
+}
+
+.standings-table .pos-1 .pos { color: var(--accent-yellow); }
+.standings-table .pos-2 .pos { color: #c0c0c0; }
+.standings-table .pos-3 .pos { color: #cd7f32; }
+
+.standings-table .rider-num {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  width: 45px;
+}
+
+.standings-table .rider-name {
+  font-weight: 600;
+}
+
+.standings-table .team-name {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.standings-table .pts {
+  font-family: 'Orbitron', sans-serif;
+  font-weight: 700;
+  color: var(--accent-cyan);
+  text-align: right;
+}
+
+.standings-table .wins-col {
+  text-align: center;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+}
+
+.standings-updated {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 0.8rem;
+}
+
+/* Calendar */
+.track-info {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.track-info h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.9rem;
+  margin-bottom: 1.5rem;
+  color: var(--accent-red);
+  letter-spacing: 2px;
+}
+
+.calendar-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 0.8rem;
+}
+
+.calendar-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  background: rgba(255,255,255,0.02);
+  border-radius: 6px;
+  border-left: 3px solid var(--accent-red);
+  font-size: 0.85rem;
+  transition: all 0.3s;
+}
+
+.calendar-item:hover {
+  background: rgba(225,6,0,0.05);
+}
+
+.calendar-item .flag { font-size: 1.2rem; flex-shrink: 0; }
+
+.calendar-item .race-info { flex: 1; }
+
+.calendar-item .race-name {
+  font-weight: 600;
+  font-size: 0.85rem;
+}
+
+.calendar-item .race-dates {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  margin-top: 2px;
+}
+
+.calendar-item.finished {
+  opacity: 0.45;
+  border-left-color: rgba(225,6,0,0.3);
+}
+
+.calendar-item.finished .race-name::after {
+  content: ' \2713';
+  color: var(--accent-cyan);
+  font-size: 0.75rem;
+}
+
+.calendar-item.next-race {
+  border-left-color: var(--accent-yellow);
+  background: rgba(255,215,0,0.06);
+  box-shadow: 0 0 15px rgba(255,215,0,0.08);
+}
+
+.calendar-item.next-race .race-name::before {
+  content: '\25B6 ';
+  color: var(--accent-yellow);
+  font-size: 0.7rem;
+}
+
+.motogp-fallback {
+  text-align: center;
+  padding: 2rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.motogp-fallback code {
+  background: rgba(255,255,255,0.08);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+/* Championship tabs */
+.championship-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 2rem;
+  border-bottom: 2px solid rgba(255,255,255,0.08);
+}
+
+.champ-tab {
+  background: none;
+  border: none;
+  padding: 0.8rem 1.8rem;
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-muted);
+  cursor: pointer;
+  position: relative;
+  transition: color 0.3s;
+  letter-spacing: 1px;
+}
+
+.champ-tab:hover {
+  color: var(--text-secondary);
+}
+
+.champ-tab.active {
+  color: var(--text-primary);
+}
+
+.champ-tab.active::after {
+  content: '';
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-red);
+}
+
+.champ-tab[data-tab="sbk"].active::after {
+  background: var(--accent-cyan);
+}
+
+.champ-panel {
+  display: none;
+}
+
+.champ-panel.active {
+  display: block;
+}
+
+/* === MATERIAIS DIDATICOS SECTION === */
+#materiais {
+  background: var(--bg-secondary);
+}
+.materiais-grid {
+  max-width: 800px;
+  margin: 0 auto;
+}
+.material-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  margin-bottom: 16px;
+  transition: border-color 0.3s;
+}
+.material-card:hover {
+  border-color: var(--accent-red);
+}
+.material-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 24px;
+  cursor: pointer;
+  user-select: none;
+}
+.material-info {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+.material-code {
+  background: var(--accent-red);
+  color: #fff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  padding: 3px 10px;
+  border-radius: 6px;
+  letter-spacing: 0.5px;
+}
+.material-name {
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1rem;
+}
+.material-count {
+  color: var(--text-secondary);
+  font-size: 0.85rem;
+}
+.material-toggle {
+  color: var(--text-secondary);
+  font-size: 1.2rem;
+  transition: transform 0.3s;
+}
+.material-card.expanded .material-toggle {
+  transform: rotate(180deg);
+}
+.material-body {
+  display: none;
+  padding: 0 24px 24px;
+}
+.material-card.expanded .material-body {
+  display: block;
+}
+.material-file-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+}
+.material-file-list li {
+  padding: 10px 14px;
+  border-bottom: 1px solid rgba(255,255,255,0.04);
+  color: var(--text-secondary);
+  font-size: 0.92rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.material-file-list li:last-child {
+  border-bottom: none;
+}
+.file-type {
+  background: rgba(0,255,255,0.1);
+  color: var(--accent-cyan);
+  font-size: 0.7rem;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 4px;
+  letter-spacing: 0.5px;
+}
+.material-actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.btn-material {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  transition: background 0.3s, transform 0.2s;
+  font-family: inherit;
+}
+.btn-material:hover {
+  transform: translateY(-1px);
+}
+.btn-solicitar {
+  background: rgba(0,255,255,0.12);
+  color: var(--accent-cyan);
+  border: 1px solid rgba(0,255,255,0.2);
+}
+.btn-solicitar:hover {
+  background: rgba(0,255,255,0.2);
+}
+.btn-download {
+  background: rgba(255,42,42,0.12);
+  color: var(--accent-red);
+  border: 1px solid rgba(255,42,42,0.2);
+}
+.btn-download:hover {
+  background: rgba(255,42,42,0.2);
+}
+.material-password {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+}
+.material-password input {
+  background: var(--bg-primary);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-primary);
+  padding: 10px 14px;
+  border-radius: 8px;
+  font-size: 0.9rem;
+  font-family: inherit;
+  width: 220px;
+}
+.material-password input:focus {
+  outline: none;
+  border-color: var(--accent-red);
+}
+.btn-confirm {
+  background: var(--accent-red);
+  color: #fff;
+}
+.btn-confirm:hover {
+  background: #ff4444;
+}
+.pw-error {
+  color: #ff4444;
+  font-size: 0.85rem;
+}
+@media (max-width: 900px) {
+  .material-header {
+    padding: 14px 16px;
+  }
+  .material-info {
+    flex-direction: column;
+    gap: 6px;
+  }
+  .material-actions {
+    flex-direction: column;
+  }
+  .btn-material {
+    justify-content: center;
+  }
+  .material-password input {
+    width: 100%;
+  }
+}
+
+/* === ARCADE SECTION === */
+#arcade {
+  background: var(--bg-secondary);
+  position: relative;
+}
+
+.arcade-intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.arcade-intro p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* Arcade Builds Photo Strip */
+.arcade-builds {
+  margin-top: 2rem;
+}
+
+.arcade-builds-label {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 2px;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 0.8rem;
+}
+
+.arcade-builds-strip {
+  display: flex;
+  gap: 0.6rem;
+  overflow-x: auto;
+  padding-bottom: 0.5rem;
+  scrollbar-width: thin;
+  scrollbar-color: var(--accent-red) transparent;
+}
+
+.arcade-builds-strip::-webkit-scrollbar { height: 4px; }
+.arcade-builds-strip::-webkit-scrollbar-thumb { background: var(--accent-red); border-radius: 2px; }
+
+.arcade-builds-strip img {
+  height: 100px;
+  width: auto;
+  border-radius: 6px;
+  flex-shrink: 0;
+  cursor: pointer;
+  border: 1px solid rgba(255,255,255,0.06);
+  transition: all 0.3s;
+  object-fit: cover;
+}
+
+.arcade-builds-strip img:hover {
+  border-color: var(--accent-cyan);
+  transform: scale(1.05);
+}
+
+/* Fullscreen image viewer */
+.arcade-fullimg-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.95);
+  z-index: 10001;
+  justify-content: center;
+  align-items: center;
+  cursor: zoom-out;
+}
+
+.arcade-fullimg-overlay.open {
+  display: flex;
+}
+
+.arcade-fullimg-overlay img {
+  max-width: 80vw;
+  max-height: 92vh;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.fullimg-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #fff;
+  font-size: 2.5rem;
+  width: 50px;
+  height: 70px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.fullimg-nav:hover {
+  background: rgba(225,6,0,0.3);
+  border-color: var(--accent-red);
+}
+
+.fullimg-prev { left: 1.5rem; }
+.fullimg-next { right: 1.5rem; }
+
+.fullimg-counter {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  background: rgba(0,0,0,0.5);
+  padding: 4px 14px;
+  border-radius: 12px;
+}
+
+.arcade-layout {
+  display: flex;
+  gap: 1.5rem;
+  min-height: 520px;
+}
+
+.arcade-sidebar {
+  width: 220px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.arcade-game-item {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 10px;
+  padding: 1rem 1.1rem;
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+}
+
+.arcade-game-item:hover {
+  border-color: rgba(0,212,255,0.3);
+  background: rgba(0,212,255,0.05);
+}
+
+.arcade-game-item.active {
+  border-color: var(--accent-cyan);
+  background: rgba(0,212,255,0.08);
+  box-shadow: 0 0 20px rgba(0,212,255,0.15);
+}
+
+.arcade-game-item .game-icon {
+  font-size: 1.6rem;
+  width: 36px;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.arcade-game-item .game-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+}
+
+.arcade-game-item .game-meta h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.6rem;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.arcade-game-item .game-meta .controls {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.arcade-canvas-area {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
+
+.arcade-canvas-wrapper {
+  position: relative;
+  flex: 1;
+  background: #000;
+  border-radius: 12px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.08);
+  min-height: 480px;
+}
+
+.arcade-canvas-wrapper #game {
+  width: 100%;
+  height: 480px;
+}
+
+/* === PROJETOS SECTION === */
+#projetos {
+  background: var(--bg-primary);
+}
+.projetos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.projeto-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.projeto-card:hover {
+  border-color: var(--accent-cyan);
+  transform: translateY(-4px);
+  box-shadow: var(--glow-cyan);
+}
+.projeto-card.featured:hover {
+  border-color: var(--accent-red);
+  box-shadow: var(--glow-red);
+}
+.projeto-thumb {
+  width: 100%;
+  height: 200px;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+  color: var(--text-muted);
+  cursor: pointer;
+  overflow: hidden;
+  position: relative;
+}
+.projeto-thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+.projeto-thumb:hover img {
+  transform: scale(1.05);
+}
+.projeto-thumb-label {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--bg-secondary), var(--bg-card));
+}
+.projeto-body {
+  padding: 24px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.projeto-tag {
+  display: inline-block;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  color: var(--accent-cyan);
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
+}
+.projeto-card.featured .projeto-tag {
+  color: var(--accent-red);
+}
+.projeto-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--text-primary);
+}
+.projeto-desc {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 16px;
+  flex: 1;
+}
+.projeto-tech {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+}
+.projeto-tech span {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.7rem;
+  padding: 4px 10px;
+  background: rgba(0,212,255,0.08);
+  border: 1px solid rgba(0,212,255,0.2);
+  border-radius: 4px;
+  color: var(--accent-cyan);
+}
+.btn-projeto {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 20px;
+  border-radius: 6px;
+  font-family: 'Rajdhani', sans-serif;
+  font-weight: 600;
+  font-size: 0.95rem;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+.btn-projeto-primary {
+  background: var(--accent-red);
+  color: white;
+}
+.btn-projeto-primary:hover {
+  background: #ff1a0d;
+  box-shadow: var(--glow-red);
+}
+.btn-projeto-secondary {
+  background: transparent;
+  color: var(--accent-cyan);
+  border: 1px solid var(--accent-cyan);
+}
+.btn-projeto-secondary:hover {
+  background: rgba(0,212,255,0.1);
+  box-shadow: var(--glow-cyan);
+}
+@media (max-width: 600px) {
+  .projetos-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* === TIPS SECTION === */
+#tips {
+  background: var(--bg-primary);
+}
+
+.tips-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 1.5rem;
+}
+
+.tip-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  padding: 2rem;
+  transition: all 0.4s;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.tip-card:hover {
+  border-color: rgba(0,255,136,0.3);
+  transform: translateY(-3px);
+}
+
+.tip-category {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  padding: 4px 10px;
+  border-radius: 3px;
+  display: inline-block;
+  margin-bottom: 1rem;
+}
+
+.tip-category.security {
+  color: var(--accent-red);
+  background: rgba(225,6,0,0.1);
+  border: 1px solid rgba(225,6,0,0.2);
+}
+
+.tip-category.hardware {
+  color: var(--accent-cyan);
+  background: rgba(0,212,255,0.1);
+  border: 1px solid rgba(0,212,255,0.2);
+}
+
+.tip-category.software {
+  color: var(--accent-green);
+  background: rgba(0,255,136,0.1);
+  border: 1px solid rgba(0,255,136,0.2);
+}
+
+.tip-category.network {
+  color: var(--accent-orange);
+  background: rgba(255,107,53,0.1);
+  border: 1px solid rgba(255,107,53,0.2);
+}
+
+.tip-card h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.8rem;
+}
+
+.tip-card p {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.7;
+}
+
+.tip-card .read-more {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 1rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent-green);
+  letter-spacing: 1px;
+  text-decoration: none;
+  transition: gap 0.3s;
+}
+
+.tip-card:hover .read-more { gap: 12px; }
+
+/* === TIP MODAL === */
+.modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
+  z-index: 2000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  pointer-events: all;
+}
+
+.modal {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.1);
+  border-radius: 12px;
+  max-width: 700px;
+  width: 100%;
+  max-height: 80vh;
+  overflow-y: auto;
+  padding: 3rem;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s;
+}
+
+.modal-overlay.active .modal {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 1.5rem;
+  right: 1.5rem;
+  background: none;
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--text-secondary);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+}
+
+.modal-close:hover {
+  border-color: var(--accent-red);
+  color: var(--accent-red);
+}
+
+.modal h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+  padding-right: 3rem;
+}
+
+.modal-content p {
+  color: var(--text-secondary);
+  line-height: 1.8;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.modal-content code {
+  background: rgba(255,255,255,0.05);
+  padding: 2px 8px;
+  border-radius: 4px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.85rem;
+  color: var(--accent-cyan);
+}
+
+.modal-content .warning-box {
+  background: rgba(225,6,0,0.08);
+  border-left: 3px solid var(--accent-red);
+  padding: 1rem 1.5rem;
+  border-radius: 0 6px 6px 0;
+  margin: 1.5rem 0;
+}
+
+.modal-content .warning-box p {
+  color: var(--text-primary);
+  margin: 0;
+  font-size: 0.9rem;
+}
+
+/* === TIMELINE / PERCURSO === */
+#percurso {
+  background: var(--bg-secondary);
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 2rem 0;
+}
+
+.timeline::before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 3px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--accent-red), var(--accent-orange), var(--accent-yellow), var(--accent-red));
+  top: 0;
+  border-radius: 3px;
+}
+
+.timeline-item {
+  position: relative;
+  width: 50%;
+  padding-bottom: 3rem;
+}
+
+.timeline-item:nth-child(odd) {
+  padding-right: 40px;
+  text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+  margin-left: 50%;
+  padding-left: 40px;
+  text-align: left;
+}
+
+.timeline-dot {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  background: var(--accent-red);
+  border: 3px solid var(--bg-secondary);
+  border-radius: 50%;
+  top: 20px;
+  z-index: 2;
+  transition: all 0.3s;
+  box-shadow: 0 0 0 3px rgba(225,6,0,0.2);
+}
+
+.timeline-item:nth-child(odd) .timeline-dot {
+  right: -8px;
+}
+
+.timeline-item:nth-child(even) .timeline-dot {
+  left: -8px;
+}
+
+.timeline-item:hover .timeline-dot {
+  box-shadow: 0 0 0 6px rgba(225,6,0,0.3), 0 0 15px rgba(225,6,0,0.4);
+  transform: scale(1.2);
+}
+
+.timeline-card {
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.05);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: all 0.4s;
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+.timeline-card:hover {
+  border-color: rgba(225,6,0,0.3);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 40px rgba(225,6,0,0.1);
+}
+
+.timeline-card img {
+  width: 100%;
+  height: 180px;
+  object-fit: cover;
+  display: block;
+}
+
+.timeline-card .thumb-placeholder {
+  width: 100%;
+  height: 180px;
+  background: linear-gradient(135deg, rgba(225,6,0,0.15), rgba(255,107,53,0.1));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.timeline-card-body {
+  padding: 1.2rem;
+}
+
+.timeline-date {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--accent-red);
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  margin-bottom: 0.5rem;
+  display: block;
+}
+
+.timeline-card h4 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 1px;
+  margin-bottom: 0.5rem;
+}
+
+.timeline-card p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+.timeline-card .card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-top: 0.8rem;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.6rem;
+  color: var(--accent-cyan);
+  letter-spacing: 1px;
+  transition: gap 0.3s;
+}
+
+.timeline-card:hover .card-link {
+  gap: 12px;
+}
+
+.timeline-card.highlight {
+  border-color: rgba(225,6,0,0.3);
+  box-shadow: 0 0 20px rgba(225,6,0,0.1);
+}
+
+.timeline-card.highlight::before {
+  content: '★ DESTAQUE';
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  font-family: 'Space Mono', monospace;
+  font-size: 0.55rem;
+  letter-spacing: 2px;
+  color: var(--accent-yellow);
+  background: rgba(0,0,0,0.7);
+  padding: 4px 10px;
+  border-radius: 3px;
+  z-index: 3;
+}
+
+.timeline-card.highlight {
+  position: relative;
+}
+
+/* === CONTACT / FOOTER === */
+#contact {
+  background: var(--bg-primary);
+  border-top: 1px solid rgba(255,255,255,0.03);
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: start;
+}
+
+.contact-info h3 {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info p {
+  color: var(--text-secondary);
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin-bottom: 2rem;
+}
+
+.contact-links {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.contact-link {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: color 0.3s;
+  padding: 8px 0;
+}
+
+.contact-link:hover { color: var(--text-primary); }
+
+.contact-link .icon {
+  width: 40px;
+  height: 40px;
+  background: rgba(255,255,255,0.03);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+  transition: all 0.3s;
+}
+
+.contact-link:hover .icon {
+  border-color: var(--accent-red);
+  background: rgba(225,6,0,0.05);
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.form-group {
+  position: relative;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  background: var(--bg-card);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  padding: 14px 18px;
+  color: var(--text-primary);
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  outline: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: var(--accent-red);
+}
+
+.form-group textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: var(--text-muted);
+}
+
+footer {
+  background: var(--bg-primary);
+  border-top: 1px solid rgba(255,255,255,0.03);
+  padding: 2rem;
+  text-align: center;
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.footer-content p {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.65rem;
+  color: var(--text-muted);
+  letter-spacing: 1px;
+}
+
+.footer-race-line {
+  height: 2px;
+  width: 100px;
+  background: linear-gradient(90deg, var(--accent-red), var(--accent-orange), transparent);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 900px) {
+  .nav-links { display: none; }
+  .nav-toggle { display: block; }
+  
+  .nav-links.open {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
+    background: rgba(10,10,15,0.98);
+    border-bottom: 1px solid rgba(225,6,0,0.2);
+    padding: 1rem 0;
+  }
+  
+  .nav-links.open a {
+    padding: 15px 30px;
+    font-size: 0.75rem;
+  }
+  
+  .about-grid,
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .oliveira-victories {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .victory-overlay { opacity: 1; }
+
+  .standings-table .team-name { display: none; }
+  .standings-table th:nth-child(4) { display: none; }
+  .calendar-list { grid-template-columns: 1fr; }
+  
+  .hero-stats { gap: 1.5rem; }
+  .hero-stat-number { font-size: 1.6rem; }
+  
+  .tips-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .arcade-builds-strip img {
+    height: 75px;
+  }
+
+  .arcade-layout {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .arcade-sidebar {
+    width: 100%;
+    flex-direction: row;
+    overflow-x: auto;
+    gap: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .arcade-game-item {
+    flex-shrink: 0;
+    padding: 0.7rem 1rem;
+    min-width: 130px;
+  }
+
+  .arcade-game-item .game-icon {
+    font-size: 1.3rem;
+    width: 28px;
+  }
+
+  .arcade-game-item .game-meta .controls {
+    display: none;
+  }
+
+  .arcade-canvas-wrapper {
+    min-height: 350px;
+  }
+
+  .timeline::before {
+    left: 20px;
+  }
+
+  .timeline-item,
+  .timeline-item:nth-child(odd),
+  .timeline-item:nth-child(even) {
+    width: 100%;
+    margin-left: 0;
+    padding: 0 0 2rem 50px;
+    text-align: left;
+  }
+
+  .timeline-item:nth-child(odd) .timeline-dot,
+  .timeline-item:nth-child(even) .timeline-dot {
+    left: 12px;
+    right: auto;
+  }
+  
+  .footer-content {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .hero-cta { flex-direction: column; align-items: center; }
+  .hero-stats { flex-wrap: wrap; }
+  section { padding: 4rem 1.5rem; }
+}
+
+/* === REVEAL ANIMATIONS === */
+.reveal {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: all 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === SPEEDOMETER DECORATION === */
+.speedometer {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  width: 300px;
+  height: 300px;
+  border: 1px solid rgba(225,6,0,0.1);
+  border-radius: 50%;
+  opacity: 0.3;
+}
+
+.speedometer::before {
+  content: '';
+  position: absolute;
+  inset: 20px;
+  border: 1px solid rgba(225,6,0,0.08);
+  border-radius: 50%;
+}
+
+.speedometer::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 2px;
+  height: 80px;
+  background: var(--accent-red);
+  transform-origin: bottom center;
+  transform: translate(-50%, -100%) rotate(-30deg);
+  animation: speedometer-sweep 3s ease-in-out infinite alternate;
+}
+
+@keyframes speedometer-sweep {
+  from { transform: translate(-50%, -100%) rotate(-60deg); }
+  to { transform: translate(-50%, -100%) rotate(60deg); }
+}
+
+/* === MUSIC PLAYER === */
+.music-btn {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: var(--bg-card);
+  border: 1px solid rgba(225,6,0,0.3);
+  color: var(--accent-red);
+  font-size: 1.2rem;
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+.music-btn:hover {
+  border-color: var(--accent-red);
+  box-shadow: var(--glow-red);
+  transform: scale(1.1);
+}
+
+.music-btn.playing {
+  animation: pulse-music 2s infinite;
+}
+
+@keyframes pulse-music {
+  0%, 100% { box-shadow: 0 0 0 0 rgba(225,6,0,0.4); }
+  50% { box-shadow: 0 0 0 10px rgba(225,6,0,0); }
+}
+
+/* MODAL Solicitar Acesso */
+.request-modal-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  z-index: 10000;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  backdrop-filter: blur(8px);
+}
+.request-modal-overlay.open { display: flex; }
+.request-modal {
+  background: var(--bg-card);
+  border: 1px solid rgba(0,212,255,0.3);
+  border-radius: 12px;
+  padding: 32px;
+  max-width: 500px;
+  width: 100%;
+  position: relative;
+  box-shadow: 0 0 60px rgba(0,212,255,0.2);
+}
+.request-modal-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: transparent;
+  border: none;
+  color: var(--text-secondary);
+  font-size: 1.8rem;
+  cursor: pointer;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  transition: all 0.2s;
+}
+.request-modal-close:hover {
+  background: rgba(255,255,255,0.06);
+  color: var(--accent-red);
+}
+.request-modal-title {
+  font-family: 'Orbitron', sans-serif;
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: var(--accent-cyan);
+}
+.request-modal-subtitle {
+  color: var(--text-secondary);
+  margin-bottom: 24px;
+  font-size: 0.95rem;
+}
+.request-modal-subtitle strong { color: var(--text-primary); }
+.request-modal .form-group { margin-bottom: 16px; }
+.request-modal input,
+.request-modal textarea {
+  width: 100%;
+  padding: 12px 16px;
+  background: var(--bg-secondary);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 6px;
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.95rem;
+  transition: border-color 0.2s;
+}
+.request-modal input:focus,
+.request-modal textarea:focus {
+  outline: none;
+  border-color: var(--accent-cyan);
+}
+
+</style>
+</head>
+<body>
+
+<!-- MUSIC PLAYER -->
+<audio id="bgMusic" loop preload="metadata">
+  <source src="tokyorifft-the-way-of-saint-james-328458.mp3" type="audio/mpeg">
+</audio>
+<button class="music-btn" id="musicBtn" onclick="toggleMusic()" title="Música" aria-label="Reproduzir/parar música">♪</button>
+
+<!-- NAVIGATION -->
+<nav id="navbar">
+  <div class="nav-inner">
+    <a href="#hero" class="nav-logo">
+      <span class="dot"></span>
+      JOSÉ.DEV
+    </a>
+    <button class="nav-toggle" onclick="toggleNav()" aria-label="Abrir/fechar menu">☰</button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#about" class="active">Sobre</a></li>
+      <li><a href="#skills">Skills</a></li>
+      <li><a href="#percurso">Formação</a></li>
+      <li><a href="#materiais">Materiais Didáticos</a></li>
+      <li><a href="#projetos">Projetos</a></li>
+      <li><a href="#tips">Dicas IT</a></li>
+      <li><a href="#arcade">Arcade</a></li>
+      <li><a href="#motogp">MotoGP</a></li>
+      <li><a href="#contact">Contacto</a></li>
+    </ul>
+  </div>
+</nav>
+
+<main>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-bg-elements">
+    <div class="circuit-line"></div>
+    <div class="circuit-line"></div>
+    <div class="circuit-line"></div>
+    <div class="circuit-line"></div>
+    <div class="circuit-line"></div>
+  </div>
+  
+  <div class="hero-content">
+    <div class="hero-badge">ONLINE &amp; DISPONÍVEL</div>
+    <h1 class="hero-name">JOSÉ ALVES</h1>
+    <p class="hero-title">Engenheiro <span>·</span> Formador <span>·</span> Maker</p>
+    
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-target="10000">0</span>
+        <span class="hero-stat-label">Horas Formação</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-target="14">0</span>
+        <span class="hero-stat-label">Certificações</span>
+      </div>
+      <div class="hero-stat">
+        <span class="hero-stat-number" data-target="15">0</span>
+        <span class="hero-stat-label">Anos Experiência</span>
+      </div>
+    </div>
+    
+    <div class="hero-cta">
+      <a href="#about" class="btn btn-primary">Conhecer →</a>
+      <a href="#contact" class="btn btn-secondary">Contactar</a>
+    </div>
+  </div>
+  
+  <div class="scroll-indicator">
+    <span>Scroll</span>
+    <div class="scroll-line"></div>
+  </div>
+  
+  <div class="speedometer"></div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="container">
+    <div class="about-grid">
+      <div class="about-photo reveal">
+        <div class="photo-frame">
+          <img src="foto_site.jpg" alt="José Alves" style="width:100%;height:100%;object-fit:cover;object-position:center center;">
+        </div>
+      </div>
+      <div class="about-info reveal">
+        <span class="section-tag">// Quem sou eu</span>
+        <h2>Engenheiro, Formador, Entusiasta</h2>
+        <p>
+          Licenciado em Engenharia Eletrotécnica e de Computadores, atualmente a finalizar o Mestrado em Ensino de Informática na FCUP. Desde 2017 como formador no IEFP, já ultrapassei as 10.000 horas de formação em áreas como redes CISCO, hardware, software e literacia digital.
+        </p>
+        <p>
+          Em paralelo, trabalho como engenheiro de sistemas embebidos na Expertmode, onde vivo a minha paixão por ESP32, Arduino, sensores, impressão 3D e design de PCBs. Quando não estou a ensinar ou a programar, provavelmente estou a ver MotoGP ou a acompanhar o meu filhote no futebol de sub-13.
+        </p>
+        <div class="about-tags">
+          <span class="tag">CCNA</span>
+          <span class="tag">ESP32</span>
+          <span class="tag">Arduino</span>
+          <span class="tag">Python</span>
+          <span class="tag">3D Printing</span>
+          <span class="tag">PCB Design</span>
+          <span class="tag">Docker</span>
+          <span class="tag">Linux</span>
+          <span class="tag">Redes</span>
+          <span class="tag">Formação</span>
+          <span class="tag">MOS: Associate</span>
+          <span class="tag">CCST Cybersecurity</span>
+          <span class="tag">CCST IT Support</span>
+          <span class="tag">CCST Networking</span>
+          <span class="tag">Network Security Support Technician</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SKILLS -->
+<section id="skills">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Competências</span>
+      <h2 class="section-title">Stack Técnico</h2>
+      <p class="section-subtitle">As ferramentas e tecnologias com que trabalho diariamente</p>
+    </div>
+    
+    <div class="skills-grid">
+      <div class="skill-card reveal">
+        <div class="skill-icon">🌐</div>
+        <h4>Redes & CISCO</h4>
+        <p>Instrutor acreditado Cisco CCNA (3 módulos). Configuração de switches, routers, VLANs, ACLs e protocolos de routing.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 95%"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🔌</div>
+        <h4>Sistemas Embebidos</h4>
+        <p>ESP32, Arduino, sensores, módulos de comunicação. Do protótipo à produção com PCB design.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 90%"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🐍</div>
+        <h4>Python & Automação</h4>
+        <p>Aplicações GUI, processamento de vídeo, geração de PDFs, automação de tarefas e scripts.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🐳</div>
+        <h4>Docker & Self-Hosting</h4>
+        <p>Infraestrutura cloud com Ubuntu Server, Docker, Nextcloud e Cloudflare Tunnel.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 80%"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🖨️</div>
+        <h4>Impressão 3D & CAD</h4>
+        <p>Modelação em Fusion 360, design de peças mecânicas, roscas e componentes para projetos.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 85%"></div></div>
+      </div>
+      <div class="skill-card reveal">
+        <div class="skill-icon">🎓</div>
+        <h4>Formação Profissional</h4>
+        <p>+10.000 horas de formação certificada em hardware, software, redes e literacia digital.</p>
+        <div class="skill-bar"><div class="skill-bar-fill" style="width: 98%"></div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PERCURSO / TIMELINE -->
+<section id="percurso">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// O meu caminho</span>
+      <h2 class="section-title">Percurso</h2>
+      <p class="section-subtitle">Marcos que definiram a minha carreira como formador e engenheiro</p>
+    </div>
+
+    <div class="timeline">
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-entreajuda.html" class="timeline-card highlight">
+          <img src="Formacao/2018_09 Projecto Entreajuda/entreajuda-thumb.jpg" alt="Projeto Entreajuda">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Setembro 2018</span>
+            <h4>Projeto Entreajuda</h4>
+            <p>Projeto social de formação e inclusão digital. Uma experiência transformadora.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-reparador.html" class="timeline-card">
+          <img src="Formacao/2018_09 Reparador Informatica/20180329_162646.jpg" alt="Curso Reparador de Informática">
+          <div class="timeline-card-body">
+            <span class="timeline-date">2018 — Presente</span>
+            <h4>Reparador de Informática</h4>
+            <p>Curso que leciono desde 2018. Turmas de formação prática em diagnóstico, montagem e reparação de equipamentos.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-summit1.html" class="timeline-card">
+          <img src="Formacao/2020_02 Summit 1.0/IMG_4069.JPEG" alt="Summit 1.0">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Fevereiro 2020</span>
+            <h4>Summit 1.0</h4>
+            <p>O primeiro grande evento. Palestras, workshops e networking no mundo da tecnologia.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-dedicatoria.html" class="timeline-card">
+          <img src="Formacao/2020_07_Dedicatoria/dedicatoria-thumb.jpg" alt="Dedicatória dos Alunos">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Julho 2020</span>
+            <h4>Dedicatória dos Alunos</h4>
+            <p>Em plena pandemia, os formandos surpreenderam com uma homenagem que vale mil palavras.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-summit2.html" class="timeline-card">
+          <img src="Formacao/2021_05 Summit 2.0/188226754_1045294975878473_147232193223794508_n.jpg" alt="Summit 2.0">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Maio 2021</span>
+            <h4>Summit 2.0</h4>
+            <p>Segunda edição do Summit. Responsável pela infraestrutura técnica e backstage do evento.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-cisco.html" class="timeline-card">
+          <img src="Formacao/2022 Cisco/IMG_2769.JPEG" alt="Cisco 2022">
+          <div class="timeline-card-body">
+            <span class="timeline-date">2022 — Presente</span>
+            <h4>Academia Cisco</h4>
+            <p>Academia Cisco — instrutor desde a criação no centro de formação de Vila Nova de Gaia. Formador dos 3 módulos CCNA.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-qsp.html" class="timeline-card">
+          <img src="Formacao/2022_06 QSPSUmmit/IMG_5311.JPEG" alt="QSP Summit 2022">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Junho 2022</span>
+            <h4>QSP Summit</h4>
+            <p>Participação no QSP Summit — tecnologia, inovação e futuro digital.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-skills-digital.html" class="timeline-card">
+          <img src="Formacao/2022_09 Skills_Digital/_MG_9638.JPG" alt="Skills Digital 2022">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Setembro 2022</span>
+            <h4>Skills Digital</h4>
+            <p>Competição Skills Digital — demonstração de competências técnicas em palco.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-ws2023.html" class="timeline-card">
+          <img src="Formacao/2023_05 WorldSkills 2023 Portimao/IMG_7362.JPEG" alt="WorldSkills Portimão">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Maio 2023</span>
+            <h4>WorldSkills Portimão</h4>
+            <p>Competição nacional WorldSkills no Autódromo de Portimão. Júri na profissão de condução de drones.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-ws2024.html" class="timeline-card">
+          <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/IMG_3998.JPEG" alt="WorldSkills 2024">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Outubro 2024</span>
+            <h4>WorldSkills Santa Maria da Feira</h4>
+            <p>Júri e expert na competição nacional. Preparei e levei um concorrente à prova de IT Network Systems Administration.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-summit3.html" class="timeline-card">
+          <img src="Formacao/2025_05 Summit 3.0/1103ACBB-ABC9-4E06-8AC1-65FC4E721270.JPEG" alt="Summit 3.0">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Maio 2025</span>
+            <h4>Summit 3.0</h4>
+            <p>Terceira edição do Summit. Novamente responsável pela infraestrutura e backstage do evento.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-portalegre.html" class="timeline-card">
+          <img src="Formacao/2025_07 WorldSkill Europeu preparaçao portalegre/3a3fa56f-008b-43cc-9fef-29f69014c19a.JPEG" alt="Preparação Europeia Portalegre">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Julho 2025</span>
+            <h4>Preparação Europeia — Portalegre</h4>
+            <p>Estágio de preparação para o campeonato europeu WorldSkills em Portalegre.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+      <div class="timeline-item reveal">
+        <div class="timeline-dot"></div>
+        <a href="percurso-dinamarca.html" class="timeline-card">
+          <img src="Formacao/2025_09 WorldSkills Dinamarca/IMG_6619.JPEG" alt="WorldSkills Dinamarca">
+          <div class="timeline-card-body">
+            <span class="timeline-date">Setembro 2025</span>
+            <h4>WorldSkills Dinamarca</h4>
+            <p>Representei Portugal como júri de IT Network Systems Administration no Campeonato Europeu.</p>
+            <span class="card-link">Ver mais →</span>
+          </div>
+        </a>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+<!-- MATERIAIS DIDATICOS -->
+<section id="materiais">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Recursos para formação</span>
+      <h2 class="section-title">Materiais Didáticos</h2>
+      <p class="section-subtitle">Recursos disponíveis para download mediante pedido de acesso</p>
+    </div>
+
+    <div class="materiais-grid">
+      <div class="material-card" data-zip="materiais/UC00612 Administrar Sistemas Operativos de Rede.zip">
+        <div class="material-header">
+          <div class="material-info">
+            <span class="material-code">UC00612</span>
+            <span class="material-name">Administrar Sistemas Operativos de Rede</span>
+            <span class="material-count">📄 11 documentos</span>
+          </div>
+          <span class="material-toggle">▼</span>
+        </div>
+        <div class="material-body">
+          <ul class="material-file-list">
+            <li>01 — Teste Diagnóstico <span class="file-type">PDF</span></li>
+            <li>02 — Grelha Correção/Interpretação <span class="file-type">PDF</span></li>
+            <li>03 — Apresentação UC00612 <span class="file-type">PPTX</span></li>
+            <li>04 — Guião Pesquisa Orientada <span class="file-type">PDF</span></li>
+            <li>05 — Guião VirtualBox <span class="file-type">PDF</span></li>
+            <li>06 — Guião Instalação Windows Server 2019 <span class="file-type">PDF</span></li>
+            <li>07 — Guião Serviços de Rede <span class="file-type">PDF</span></li>
+            <li>08 — Guião PowerShell <span class="file-type">PDF</span></li>
+            <li>09 — Cenário Integrador Final <span class="file-type">PDF</span></li>
+            <li>10 — Grelha de Avaliação <span class="file-type">PDF</span></li>
+            <li>11 — Manual Windows Server <span class="file-type">PDF</span></li>
+          </ul>
+          <div class="material-actions">
+            <a href="mailto:mail@josealves.org?subject=Pedido%20de%20acesso%3A%20UC00612%20Administrar%20Sistemas%20Operativos%20de%20Rede" class="btn-material btn-solicitar">📧 Solicitar Acesso</a>
+            <button class="btn-material btn-download">⬇ Download</button>
+          </div>
+          <div class="material-password" style="display:none">
+            <input type="password" placeholder="Introduza a password">
+            <button class="btn-material btn-confirm">Confirmar</button>
+            <span class="pw-error" style="display:none">Password incorreta</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROJETOS -->
+<section id="projetos">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Aplicações & ferramentas</span>
+      <h2 class="section-title">Projetos</h2>
+      <p class="section-subtitle">Aplicações desenvolvidas — algumas online, outras disponíveis mediante pedido</p>
+    </div>
+
+    <div class="projetos-grid">
+
+      <!-- Transcribe (online) -->
+      <div class="projeto-card featured reveal">
+        <div class="projeto-thumb">
+          <div class="projeto-thumb-label">
+            <span style="font-size:4rem">🎙️</span>
+            <span style="font-family:'Orbitron',sans-serif;font-size:1.1rem;color:var(--accent-red);margin-top:8px;letter-spacing:2px">TRANSCRIBE</span>
+          </div>
+        </div>
+        <div class="projeto-body">
+          <span class="projeto-tag">// Online</span>
+          <h3 class="projeto-title">Transcribe</h3>
+          <p class="projeto-desc">Aplicação web que transcreve áudio em texto.</p>
+          <div class="projeto-tech">
+            <span>Web App</span>
+            <span>IA</span>
+          </div>
+          <a href="https://transcribe.josealves.org/app" target="_blank" rel="noopener" class="btn-projeto btn-projeto-primary">🚀 Aceder à App</a>
+        </div>
+      </div>
+
+      <!-- Gestor Contas -->
+      <div class="projeto-card reveal">
+        <div class="projeto-thumb" onclick="openProjectImg('projectos/gestor-contas.jpg')">
+          <img src="projectos/gestor-contas.jpg" alt="Gestor de Contas Pessoal" loading="lazy">
+        </div>
+        <div class="projeto-body">
+          <span class="projeto-tag">// Desktop App</span>
+          <h3 class="projeto-title">Gestor de Contas Pessoal</h3>
+          <p class="projeto-desc">Aplicação Windows para gerir despesas, receitas e orçamento pessoal.</p>
+          <div class="projeto-tech">
+            <span>Windows</span>
+            <span>.exe</span>
+          </div>
+          <button type="button" onclick="openRequestModal('Gestor de Contas Pessoal')" class="btn-projeto btn-projeto-secondary">📧 Solicitar Acesso</button>
+        </div>
+      </div>
+
+      <!-- Numeracao Paginas -->
+      <div class="projeto-card reveal">
+        <div class="projeto-thumb" onclick="openProjectImg('projectos/numeracao-paginas.jpg')">
+          <img src="projectos/numeracao-paginas.jpg" alt="Numeração de Páginas" loading="lazy">
+        </div>
+        <div class="projeto-body">
+          <span class="projeto-tag">// Ferramenta HTML</span>
+          <h3 class="projeto-title">Numeração de Páginas</h3>
+          <p class="projeto-desc">Ferramenta para numerar páginas de documentos de forma rápida e configurável.</p>
+          <div class="projeto-tech">
+            <span>HTML</span>
+            <span>JavaScript</span>
+          </div>
+          <button type="button" onclick="openRequestModal('Numeração de Páginas')" class="btn-projeto btn-projeto-secondary">📧 Solicitar Acesso</button>
+        </div>
+      </div>
+
+      <!-- Remove Audio -->
+      <div class="projeto-card reveal">
+        <div class="projeto-thumb" onclick="openProjectImg('projectos/remove-audio.jpg')">
+          <img src="projectos/remove-audio.jpg" alt="Remove Áudio de Vídeos" loading="lazy">
+        </div>
+        <div class="projeto-body">
+          <span class="projeto-tag">// Script Python</span>
+          <h3 class="projeto-title">Remove Áudio de Vídeos</h3>
+          <p class="projeto-desc">Script que remove a faixa de áudio de ficheiros de vídeo, mantendo apenas a imagem.</p>
+          <div class="projeto-tech">
+            <span>Python</span>
+            <span>FFmpeg</span>
+          </div>
+          <button type="button" onclick="openRequestModal('Remove Áudio de Vídeos')" class="btn-projeto btn-projeto-secondary">📧 Solicitar Acesso</button>
+        </div>
+      </div>
+
+      <!-- HEIC -> JPG -->
+      <div class="projeto-card reveal">
+        <div class="projeto-thumb" onclick="openProjectImg('projectos/heic-jpg.jpg')">
+          <img src="projectos/heic-jpg.jpg" alt="Conversor HEIC para JPG" loading="lazy">
+        </div>
+        <div class="projeto-body">
+          <span class="projeto-tag">// Script Python</span>
+          <h3 class="projeto-title">Conversor HEIC → JPG</h3>
+          <p class="projeto-desc">Conversor de fotos do iPhone (formato HEIC) para JPG, em lote.</p>
+          <div class="projeto-tech">
+            <span>Python</span>
+            <span>Pillow</span>
+          </div>
+          <button type="button" onclick="openRequestModal('Conversor HEIC para JPG')" class="btn-projeto btn-projeto-secondary">📧 Solicitar Acesso</button>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- TIPS -->
+<section id="tips">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Tech tips</span>
+      <h2 class="section-title">Dicas & Segurança</h2>
+      <p class="section-subtitle">Problemas comuns de informática e como os resolver</p>
+    </div>
+
+    <div class="tips-grid">
+      <div class="tip-card reveal" onclick="openTip(0)">
+        <span class="tip-category security">🔒 Segurança</span>
+        <h4>Passwords Seguras em 2025</h4>
+        <p>Aprende a criar e gerir passwords verdadeiramente seguras. Gestor de passwords, 2FA e boas práticas.</p>
+        <span class="read-more">Ler mais →</span>
+      </div>
+
+      <div class="tip-card reveal" onclick="openTip(1)">
+        <span class="tip-category hardware">🔧 Hardware</span>
+        <h4>PC Lento? Diagnóstico Rápido</h4>
+        <p>Os 5 passos que faço sempre para diagnosticar um computador lento. Do Task Manager ao SSD.</p>
+        <span class="read-more">Ler mais →</span>
+      </div>
+
+      <div class="tip-card reveal" onclick="openTip(2)">
+        <span class="tip-category software">💻 Software</span>
+        <h4>Windows: Limpar e Otimizar</h4>
+        <p>Ferramentas e comandos essenciais para manter o Windows limpo e rápido sem instalar nada extra.</p>
+        <span class="read-more">Ler mais →</span>
+      </div>
+
+      <div class="tip-card reveal" onclick="openTip(3)">
+        <span class="tip-category network">📡 Redes</span>
+        <h4>Wi-Fi Fraco? Soluções Reais</h4>
+        <p>Configurações de router, canais, posicionamento e quando realmente precisas de um repetidor.</p>
+        <span class="read-more">Ler mais →</span>
+      </div>
+
+      <div class="tip-card reveal" onclick="openTip(4)">
+        <span class="tip-category security">🛡️ Segurança</span>
+        <h4>Phishing: Como Identificar</h4>
+        <p>Emails falsos estão cada vez mais sofisticados. Aprende a detetar os sinais antes de clicar.</p>
+        <span class="read-more">Ler mais →</span>
+      </div>
+
+      <div class="tip-card reveal" onclick="openTip(5)">
+        <span class="tip-category hardware">🖥️ Hardware</span>
+        <h4>Montar um PC: Guia Essencial</h4>
+        <p>Componentes, compatibilidade e os erros mais comuns quando montas o teu primeiro PC.</p>
+        <span class="read-more">Ler mais →</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ARCADE -->
+<section id="arcade">
+  <div class="container">
+    <div class="section-header reveal">
+      <span class="section-tag">// Insert coin</span>
+      <h2 class="section-title">Arcade Zone</h2>
+      <p class="section-subtitle">Jogos clássicos diretamente no browser</p>
+    </div>
+
+    <div class="arcade-layout reveal">
+      <!-- SIDEBAR -->
+      <div class="arcade-sidebar">
+        <div class="arcade-game-item active" onclick="selectGame('pacman', this)">
+          <span class="game-icon">🟡</span>
+          <div class="game-meta">
+            <h4>PAC-MAN</h4>
+            <span class="controls">NAMCO 1980</span>
+          </div>
+        </div>
+        <div class="arcade-game-item" onclick="selectGame('bublbobl', this)">
+          <span class="game-icon">🫧</span>
+          <div class="game-meta">
+            <h4>BUBBLE BOBBLE</h4>
+            <span class="controls">TAITO 1986</span>
+          </div>
+        </div>
+        <div class="arcade-game-item" onclick="selectGame('pang', this)">
+          <span class="game-icon">🎯</span>
+          <div class="game-meta">
+            <h4>PANG</h4>
+            <span class="controls">MITCHELL 1989</span>
+          </div>
+        </div>
+        <div class="arcade-game-item" onclick="selectGame('pbobblen', this)">
+          <span class="game-icon">🫧</span>
+          <div class="game-meta">
+            <h4>PUZZLE BOBBLE</h4>
+            <span class="controls">TAITO 1994</span>
+          </div>
+        </div>
+        <div class="arcade-game-item" onclick="selectGame('pbaction', this)">
+          <span class="game-icon">🎰</span>
+          <div class="game-meta">
+            <h4>PINBALL ACTION</h4>
+            <span class="controls">TEHKAN 1985</span>
+          </div>
+        </div>
+        <div class="arcade-game-item" onclick="selectGame('tnzs', this)">
+          <span class="game-icon">🥝</span>
+          <div class="game-meta">
+            <h4>NEWZEALAND STORY</h4>
+            <span class="controls">TAITO 1988</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- EMULATOR AREA -->
+      <div class="arcade-canvas-area">
+        <div class="arcade-canvas-wrapper" id="arcadeWrapper">
+          <div id="game" style="width:100%;height:100%"></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Arcade Build Photos -->
+    <div class="arcade-builds reveal">
+      <div class="arcade-builds-label">Arcades que construi</div>
+      <div class="arcade-builds-strip">
+        <img src="arcade/Arcade_1/arcade_1_1.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_1/arcade_1_2.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_2/arcade_2_1.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_2/arcade_2_2.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_3/arcade_3_1.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_4/arcade_4_1.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_4/arcade_4_2.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_4/arcade_4_3.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_5/arcade_5_1.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_5/arcade_5_2.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_5/arcade_5_3.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_5/arcade_5_4.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_5/arcade_5_5.JPG" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_6/arcade_6_1.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+        <img src="arcade/Arcade_6/arcade_6_2.jpg" alt="Arcade build" loading="lazy" onclick="openBuildPhoto(this)">
+      </div>
+    </div>
+
+    <!-- Fullscreen photo viewer -->
+    <div class="arcade-fullimg-overlay" id="arcadeFullImg" onclick="closeFullImg()" role="dialog" aria-label="Visualizador de foto em ecrã completo">
+      <button class="fullimg-nav fullimg-prev" onclick="event.stopPropagation();navBuildPhoto(-1)" aria-label="Foto anterior">&#8249;</button>
+      <img id="arcadeFullImgSrc" src="" alt="" onclick="event.stopPropagation()">
+      <button class="fullimg-nav fullimg-next" onclick="event.stopPropagation();navBuildPhoto(1)" aria-label="Foto seguinte">&#8250;</button>
+      <span class="fullimg-counter" id="fullimgCounter"></span>
+    </div>
+  </div>
+</section>
+
+<!-- MOTOGP -->
+<section id="motogp">
+  <div class="motogp-bg"></div>
+  <div class="container motogp-content">
+    <div class="section-header reveal">
+      <span class="section-tag">// Paixão sobre duas rodas</span>
+      <h2 class="section-title">MotoGP Zone</h2>
+      <p class="section-subtitle">A velocidade, a adrenalina, os pilotos lendários</p>
+    </div>
+
+    <div class="oliveira-tribute reveal">
+      <div class="oliveira-header">
+        <div class="oliveira-flag">🇵🇹</div>
+        <div>
+          <h3 class="oliveira-name">#88 Miguel Oliveira</h3>
+          <p class="oliveira-tagline">O orgulho português no MotoGP — 5 vitórias na classe rainha</p>
+        </div>
+      </div>
+      <div class="oliveira-victories">
+        <div class="victory-card">
+          <div class="victory-img" style="background-image:url('motogp/oliveira/vitoria-1.jpg')">
+            <div class="victory-fallback">🏆<br>2020</div>
+          </div>
+          <div class="victory-overlay">
+            <span class="victory-flag">🇦🇹</span>
+            <h4>GP Styria 2020</h4>
+            <p>Red Bull Ring</p>
+            <span class="victory-detail">Ultrapassagem na última curva a Pol Espargaró</span>
+          </div>
+        </div>
+        <div class="victory-card">
+          <div class="victory-img" style="background-image:url('motogp/oliveira/vitoria-2.jpg')">
+            <div class="victory-fallback">🏆<br>2020</div>
+          </div>
+          <div class="victory-overlay">
+            <span class="victory-flag">🇵🇹</span>
+            <h4>GP Portugal 2020</h4>
+            <p>Portimão</p>
+            <span class="victory-detail">Vitória em casa na estreia do Algarve no MotoGP</span>
+          </div>
+        </div>
+        <div class="victory-card">
+          <div class="victory-img" style="background-image:url('motogp/oliveira/vitoria-3.jpg')">
+            <div class="victory-fallback">🏆<br>2021</div>
+          </div>
+          <div class="victory-overlay">
+            <span class="victory-flag">🇪🇸</span>
+            <h4>GP Catalunya 2021</h4>
+            <p>Barcelona</p>
+            <span class="victory-detail">Domínio total sob chuva — 6 segundos de avanço</span>
+          </div>
+        </div>
+        <div class="victory-card">
+          <div class="victory-img" style="background-image:url('motogp/oliveira/vitoria-4.jpg')">
+            <div class="victory-fallback">🏆<br>2022</div>
+          </div>
+          <div class="victory-overlay">
+            <span class="victory-flag">🇮🇩</span>
+            <h4>GP Indonesia 2022</h4>
+            <p>Mandalika</p>
+            <span class="victory-detail">Primeira vitória com a KTM em piso molhado</span>
+          </div>
+        </div>
+        <div class="victory-card">
+          <div class="victory-img" style="background-image:url('motogp/oliveira/vitoria-5.jpg')">
+            <div class="victory-fallback">🏆<br>2022</div>
+          </div>
+          <div class="victory-overlay">
+            <span class="victory-flag">🇹🇭</span>
+            <h4>GP Thailand 2022</h4>
+            <p>Buriram</p>
+            <span class="victory-detail">Liderou do início ao fim — vitória dominante</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="championship-tabs reveal">
+      <button class="champ-tab active" data-tab="motogp">MotoGP 2026</button>
+      <button class="champ-tab" data-tab="sbk">WorldSBK 2026</button>
+    </div>
+
+    <div class="champ-panel active" id="panel-motogp">
+      <div class="standings-block reveal" id="motogpStandings">
+        <h4>🏆 CLASSIFICAÇÃO DO CAMPEONATO</h4>
+        <div class="motogp-fallback">A carregar dados...</div>
+      </div>
+      <div class="track-info reveal" id="motogpCalendar">
+        <h4>📅 CALENDÁRIO — TODOS OS GRANDES PRÉMIOS</h4>
+        <div class="calendar-list"></div>
+      </div>
+    </div>
+
+    <div class="champ-panel" id="panel-sbk">
+      <div class="standings-block reveal" id="sbkStandings">
+        <h4>🏆 CLASSIFICAÇÃO WORLDSBK</h4>
+        <div class="motogp-fallback">A carregar dados...</div>
+      </div>
+      <div class="track-info reveal" id="sbkCalendar">
+        <h4>📅 CALENDÁRIO WORLDSBK — TODAS AS RONDAS</h4>
+        <div class="calendar-list"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact">
+  <div class="container">
+    <div class="contact-grid">
+      <div class="contact-info reveal">
+        <span class="section-tag">// Fala comigo</span>
+        <h3>Vamos Trabalhar Juntos</h3>
+        <p>Precisa de formação personalizada, consultoria em redes ou um projeto de sistemas embebidos? Estou disponível para novos desafios.</p>
+        <div class="contact-links">
+          <a href="#" class="contact-link" data-mail data-user="mail" data-domain="josealves.org">
+            <span class="icon" aria-hidden="true">📧</span>
+            <span class="email-text">mail [at] josealves [dot] org</span>
+          </a>
+          <a href="https://www.linkedin.com/in/josesilvaalves" target="_blank" class="contact-link">
+            <span class="icon">💼</span>
+            LinkedIn
+          </a>          <a href="https://github.com/josemalves" target="_blank" rel="noopener" class="contact-link">
+            <span class="icon" aria-hidden="true">💻</span>
+            github.com/josemalves
+          </a>
+          <a href="https://www.instagram.com/jmsa.alves" target="_blank" class="contact-link">
+            <span class="icon">📸</span>
+            @jmsa.alves
+          </a>
+          <a href="#" class="contact-link">
+            <span class="icon">📍</span>
+            Vila Nova de Gaia, Portugal
+          </a>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" onsubmit="return submitContactForm(event)">
+        <input type="hidden" name="access_key" value="7eb08a76-97ee-45b2-96fe-623a1c4ead82">
+        <input type="hidden" name="subject" value="[Site] Nova mensagem do formulario">
+        <input type="hidden" name="from_name" value="Site josealves.org">
+        <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+        <div class="form-group">
+          <label for="cf-nome" class="sr-only">Nome</label>
+          <input type="text" id="cf-nome" name="name" placeholder="Nome" required autocomplete="name">
+        </div>
+        <div class="form-group">
+          <label for="cf-email" class="sr-only">Email</label>
+          <input type="email" id="cf-email" name="email" placeholder="Email" required autocomplete="email">
+        </div>
+        <div class="form-group">
+          <label for="cf-assunto" class="sr-only">Assunto</label>
+          <input type="text" id="cf-assunto" name="assunto" placeholder="Assunto" required>
+        </div>
+        <div class="form-group">
+          <label for="cf-mensagem" class="sr-only">Mensagem</label>
+          <textarea id="cf-mensagem" name="message" placeholder="Mensagem..." required rows="5"></textarea>
+        </div>
+        <button type="submit" id="cf-submit" class="btn btn-primary" style="width:100%;justify-content:center;">Enviar Mensagem →</button>
+        <p class="form-status" id="cf-status" style="margin-top:12px;text-align:center;font-size:0.9rem;"></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+
+<!-- MODAL: Solicitar Acesso a Projeto -->
+<div class="request-modal-overlay" id="requestModal" onclick="closeRequestModal(event)" role="dialog" aria-label="Solicitar acesso a projeto">
+  <div class="request-modal" onclick="event.stopPropagation()">
+    <button class="request-modal-close" onclick="closeRequestModal()" aria-label="Fechar">&times;</button>
+    <h3 class="request-modal-title">Solicitar Acesso</h3>
+    <p class="request-modal-subtitle" id="requestModalSubtitle">Projeto: <strong></strong></p>
+    <form id="requestForm" onsubmit="return submitRequestForm(event)">
+      <input type="hidden" name="access_key" value="7eb08a76-97ee-45b2-96fe-623a1c4ead82">
+      <input type="hidden" name="from_name" value="Site josealves.org - Pedido de Acesso">
+      <input type="hidden" name="subject" id="rf-subject" value="">
+      <input type="hidden" name="projeto" id="rf-projeto" value="">
+      <input type="checkbox" name="botcheck" style="display:none" tabindex="-1" autocomplete="off">
+      <div class="form-group">
+        <label for="rf-nome" class="sr-only">Nome</label>
+        <input type="text" id="rf-nome" name="name" placeholder="Nome" required autocomplete="name">
+      </div>
+      <div class="form-group">
+        <label for="rf-email" class="sr-only">Email</label>
+        <input type="email" id="rf-email" name="email" placeholder="Email" required autocomplete="email">
+      </div>
+      <div class="form-group">
+        <label for="rf-motivo" class="sr-only">Motivo do pedido</label>
+        <textarea id="rf-motivo" name="message" placeholder="Para que pretendes usar (opcional)..." rows="3"></textarea>
+      </div>
+      <button type="submit" id="rf-submit" class="btn btn-primary" style="width:100%;justify-content:center;">Enviar Pedido</button>
+      <p class="form-status" id="rf-status" style="margin-top:12px;text-align:center;font-size:0.9rem;"></p>
+    </form>
+  </div>
+</div>
+
+</main>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-content">
+    <p>© 2025 JOSÉ ALVES — Feito com ❤️ e muitas linhas de código</p>
+    <div class="footer-race-line"></div>
+    <p>ENGENHEIRO · FORMADOR · MAKER</p>
+  </div>
+</footer>
+
+<!-- TIP MODAL -->
+<div class="modal-overlay" id="tipModal">
+  <div class="modal">
+    <button class="modal-close" onclick="closeTip()">✕</button>
+    <h3 id="tipTitle"></h3>
+    <div class="modal-content" id="tipContent"></div>
+  </div>
+</div>
+
+<script>
+// === TIPS DATA ===
+const tipsData = [
+  {
+    title: "🔒 Passwords Seguras em 2025",
+    content: `
+      <p>A tua password é a primeira linha de defesa. Se usas "123456" ou o nome do teu cão, está na hora de mudar.</p>
+      <p><strong>Regras de ouro:</strong></p>
+      <p>Usa pelo menos 14 caracteres. Combina maiúsculas, minúsculas, números e símbolos. Nunca repitas passwords entre serviços diferentes.</p>
+      <div class="warning-box">
+        <p>⚠️ Dica profissional: Usa um gestor de passwords como o Bitwarden (gratuito e open-source) para guardar todas as tuas credenciais de forma segura.</p>
+      </div>
+      <p>Ativa sempre a autenticação de dois fatores (2FA) quando disponível. Apps como Google Authenticator ou Authy são muito mais seguras que SMS.</p>
+      <p>Técnica de passphrase: em vez de <code>P@ssw0rd!</code> usa algo como <code>CafeComLeite-No-Inverno-2025!</code> — é mais longa, mais segura e mais fácil de memorizar.</p>
+    `
+  },
+  {
+    title: "🔧 PC Lento? Diagnóstico Rápido",
+    content: `
+      <p>Antes de formatar ou comprar um PC novo, faz este diagnóstico em 5 passos:</p>
+      <p><strong>Passo 1:</strong> Abre o Task Manager (<code>Ctrl+Shift+Esc</code>) e verifica o que está a consumir CPU, RAM e disco.</p>
+      <p><strong>Passo 2:</strong> Verifica os programas que arrancam com o Windows. No Task Manager → Startup, desativa tudo o que não precisas.</p>
+      <p><strong>Passo 3:</strong> Verifica o espaço em disco. Se tens menos de 10% livre no disco C:, o Windows vai sofrer. Usa <code>Limpeza de Disco</code> ou o comando <code>cleanmgr</code>.</p>
+      <p><strong>Passo 4:</strong> Verifica a temperatura. Programas como HWMonitor mostram se o CPU está a sobreaquecer (acima de 80°C é preocupante).</p>
+      <div class="warning-box">
+        <p>⚠️ Se o disco for HDD e não SSD, esta é quase sempre a causa da lentidão. Trocar para SSD é a melhor atualização que podes fazer — o PC fica como novo!</p>
+      </div>
+      <p><strong>Passo 5:</strong> Faz um scan com o Windows Defender ou Malwarebytes para descartar malware.</p>
+    `
+  },
+  {
+    title: "💻 Windows: Limpar e Otimizar",
+    content: `
+      <p>Não precisas de instalar programas "mágicos" de otimização. O Windows tem tudo o que precisas:</p>
+      <p><strong>Limpeza de disco:</strong> Digita <code>cleanmgr</code> no menu iniciar. Seleciona "Limpar ficheiros de sistema" para libertar ainda mais espaço.</p>
+      <p><strong>Desfragmentação (só HDD):</strong> Digita <code>dfrgui</code>. Se tens SSD, o Windows já faz TRIM automaticamente — não desfragmentes SSDs!</p>
+      <p><strong>Verificar integridade do sistema:</strong> Abre o Command Prompt como admin e executa <code>sfc /scannow</code> seguido de <code>DISM /Online /Cleanup-Image /RestoreHealth</code>.</p>
+      <div class="warning-box">
+        <p>⚠️ Nunca instales "otimizadores" ou "limpadores de registo". Na maioria dos casos fazem mais mal que bem e podem conter malware.</p>
+      </div>
+      <p><strong>Windows Update:</strong> Mantém sempre o sistema atualizado. As atualizações corrigem vulnerabilidades de segurança críticas.</p>
+    `
+  },
+  {
+    title: "📡 Wi-Fi Fraco? Soluções Reais",
+    content: `
+      <p>Antes de comprar um repetidor, verifica estas soluções que resolvem 80% dos problemas:</p>
+      <p><strong>Posição do Router:</strong> Coloca-o numa posição central e elevada. Nunca dentro de armários ou no chão. Longe de micro-ondas e monitores de bebé.</p>
+      <p><strong>Canal Wi-Fi:</strong> Usa uma app como "WiFi Analyzer" para ver qual canal está menos congestionado. Acede ao router (geralmente <code>192.168.1.1</code>) e muda para esse canal.</p>
+      <p><strong>Banda 5GHz:</strong> Se o teu router suporta dual-band, usa a rede 5GHz para dispositivos próximos (mais rápida) e 2.4GHz para dispositivos mais distantes (maior alcance).</p>
+      <div class="warning-box">
+        <p>⚠️ Repetidores Wi-Fi cortam a velocidade pela metade! Se precisas de cobertura extra, investe num sistema Mesh ou usa cabo Ethernet + access point.</p>
+      </div>
+      <p><strong>Firmware do Router:</strong> Atualiza o firmware do teu router regularmente. Muitos problemas de performance são resolvidos com atualizações.</p>
+    `
+  },
+  {
+    title: "🛡️ Phishing: Como Identificar",
+    content: `
+      <p>Em 2025, os emails de phishing são quase indistinguíveis dos reais. Aqui está como te proteger:</p>
+      <p><strong>Verifica o remetente:</strong> O nome pode dizer "Banco X" mas o email real ser algo como <code>suporte@banc0-x.fake.com</code>. Clica no nome para ver o endereço completo.</p>
+      <p><strong>Urgência suspeita:</strong> "A sua conta será bloqueada em 24h!" — Empresas legítimas nunca te pressionam assim. É a técnica favorita dos atacantes.</p>
+      <p><strong>Links disfarçados:</strong> Passa o rato por cima do link SEM clicar. O URL real aparece no canto inferior do browser. Se não corresponde ao site oficial, não cliques.</p>
+      <div class="warning-box">
+        <p>⚠️ Regra de ouro: Nunca cliques em links de emails. Vai diretamente ao site oficial escrevendo o endereço no browser. Se a notificação for real, vais encontrá-la lá.</p>
+      </div>
+      <p><strong>Anexos perigosos:</strong> Ficheiros <code>.exe</code>, <code>.scr</code>, <code>.zip</code> de remetentes desconhecidos? Apaga imediatamente. Mesmo <code>.docx</code> e <code>.pdf</code> podem conter macros maliciosas.</p>
+    `
+  },
+  {
+    title: "🖥️ Montar um PC: Guia Essencial",
+    content: `
+      <p>Montar um PC é mais fácil do que parece, mas há erros que podem custar caro:</p>
+      <p><strong>Compatibilidade:</strong> Usa o site PCPartPicker para verificar se todos os componentes são compatíveis. O socket do CPU tem de corresponder ao da motherboard!</p>
+      <p><strong>Fonte de alimentação:</strong> Nunca poupes na PSU. Compra uma certificada 80+ Bronze no mínimo. Uma PSU barata pode danificar todos os componentes.</p>
+      <p><strong>Gestão de cabos:</strong> Organiza os cabos por trás da caixa. Melhora o fluxo de ar e a manutenção futura. Usa braçadeiras e velcro.</p>
+      <div class="warning-box">
+        <p>⚠️ Erro #1 dos iniciantes: Esquecer de ligar o cabo de alimentação de 8 pinos do CPU na motherboard. O PC não arranca sem ele!</p>
+      </div>
+      <p><strong>Pasta térmica:</strong> Se o cooler não vier com pasta pré-aplicada, usa uma quantidade do tamanho de um grão de arroz no centro do CPU. Não espalhes — a pressão do cooler distribui.</p>
+      <p><strong>Primeiro arranque:</strong> Monta primeiro fora da caixa (sobre a caixa da motherboard) para testar se tudo funciona antes de montar dentro do case.</p>
+    `
+  }
+];
+
+function openTip(index) {
+  const modal = document.getElementById('tipModal');
+  document.getElementById('tipTitle').textContent = tipsData[index].title;
+  document.getElementById('tipContent').innerHTML = tipsData[index].content;
+  modal.classList.add('active');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeTip() {
+  document.getElementById('tipModal').classList.remove('active');
+  document.body.style.overflow = '';
+}
+
+document.getElementById('tipModal').addEventListener('click', function(e) {
+  if (e.target === this) closeTip();
+});
+
+// === NAV ===
+function toggleNav() {
+  document.getElementById('navLinks').classList.toggle('open');
+}
+
+window.addEventListener('scroll', () => {
+  const nav = document.getElementById('navbar');
+  nav.classList.toggle('scrolled', window.scrollY > 50);
+  
+  // Close mobile nav on scroll
+  document.getElementById('navLinks').classList.remove('open');
+  
+  // Active nav link
+  const sections = document.querySelectorAll('section');
+  const navLinks = document.querySelectorAll('.nav-links a');
+  let current = '';
+  sections.forEach(s => {
+    if (window.scrollY >= s.offsetTop - 200) current = s.id;
+  });
+  navLinks.forEach(a => {
+    a.classList.toggle('active', a.getAttribute('href') === '#' + current);
+  });
+});
+
+// === COUNTER ANIMATION ===
+function animateCounters() {
+  document.querySelectorAll('.hero-stat-number').forEach(el => {
+    const target = parseInt(el.dataset.target);
+    const duration = 2000;
+    const start = performance.now();
+    
+    function update(now) {
+      const elapsed = now - start;
+      const progress = Math.min(elapsed / duration, 1);
+      const eased = 1 - Math.pow(1 - progress, 3);
+      el.textContent = Math.floor(target * eased).toLocaleString() + (target >= 1000 ? '+' : '+');
+      if (progress < 1) requestAnimationFrame(update);
+    }
+    requestAnimationFrame(update);
+  });
+}
+
+// === REVEAL ON SCROLL ===
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach((entry, i) => {
+    if (entry.isIntersecting) {
+      setTimeout(() => entry.target.classList.add('visible'), i * 100);
+    }
+  });
+}, { threshold: 0.1 });
+
+document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+// Start counters when hero is visible
+const heroObserver = new IntersectionObserver(entries => {
+  if (entries[0].isIntersecting) {
+    animateCounters();
+    heroObserver.disconnect();
+  }
+});
+heroObserver.observe(document.getElementById('hero'));
+
+// =============================================
+// ARCADE — EmulatorJS ROM Loader
+// =============================================
+
+let arcadeLoaded = false;
+
+function selectGame(game, el) {
+  document.querySelectorAll('.arcade-game-item').forEach(i => i.classList.remove('active'));
+  el.classList.add('active');
+  loadArcadeGame(game);
+}
+
+function loadArcadeGame(game) {
+  const wrapper = document.getElementById('arcadeWrapper');
+  // Remove old emulator
+  const oldGame = document.getElementById('game');
+  if (oldGame) oldGame.remove();
+  // Remove old EmulatorJS scripts and styles
+  document.querySelectorAll('script[src*="emulatorjs"], link[href*="emulatorjs"]').forEach(s => s.remove());
+  if (window.EJS_emulator) {
+    try { window.EJS_emulator.elements.parent.remove(); } catch(e) {}
+    window.EJS_emulator = null;
+  }
+  // Create fresh container
+  const div = document.createElement('div');
+  div.id = 'game';
+  div.style.cssText = 'width:100%;height:480px';
+  wrapper.appendChild(div);
+  // Configure EmulatorJS
+  window.EJS_player = '#game';
+  window.EJS_core = 'arcade';
+  window.EJS_gameUrl = 'roms/' + game + '.zip';
+  window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
+  window.EJS_color = '#e10600';
+  window.EJS_startOnLoaded = false;
+  window.EJS_backgroundColor = '#000';
+  // Load EmulatorJS
+  const script = document.createElement('script');
+  script.src = 'https://cdn.emulatorjs.org/stable/data/loader.js';
+  document.body.appendChild(script);
+}
+
+// =============================================
+// ARCADE BUILD PHOTOS
+// =============================================
+
+let buildPhotos = [];
+let currentBuildPhoto = 0;
+
+function openBuildPhoto(img) {
+  buildPhotos = Array.from(document.querySelectorAll('.arcade-builds-strip img'));
+  currentBuildPhoto = buildPhotos.indexOf(img);
+  showBuildPhoto();
+  document.getElementById('arcadeFullImg').classList.add('open');
+  document.body.style.overflow = 'hidden';
+}
+
+function showBuildPhoto() {
+  document.getElementById('arcadeFullImgSrc').src = buildPhotos[currentBuildPhoto].src;
+  document.getElementById('fullimgCounter').textContent = (currentBuildPhoto + 1) + ' / ' + buildPhotos.length;
+}
+
+function navBuildPhoto(dir) {
+  currentBuildPhoto = (currentBuildPhoto + dir + buildPhotos.length) % buildPhotos.length;
+  showBuildPhoto();
+}
+
+function closeFullImg() {
+  document.getElementById('arcadeFullImg').classList.remove('open');
+  document.body.style.overflow = '';
+}
+
+document.addEventListener('keydown', e => {
+  if (!document.getElementById('arcadeFullImg').classList.contains('open')) return;
+  if (e.key === 'Escape') closeFullImg();
+  if (e.key === 'ArrowLeft') navBuildPhoto(-1);
+  if (e.key === 'ArrowRight') navBuildPhoto(1);
+});
+
+// =============================================
+// PROJETOS — Fullscreen image viewer (single image)
+// =============================================
+
+function openProjectImg(src) {
+  const overlay = document.getElementById('arcadeFullImg');
+  document.getElementById('arcadeFullImgSrc').src = src;
+  document.getElementById('fullimgCounter').textContent = '';
+  overlay.querySelectorAll('.fullimg-nav').forEach(b => b.style.display = 'none');
+  overlay.classList.add('open');
+  overlay.dataset.singleImg = '1';
+  document.body.style.overflow = 'hidden';
+}
+
+// Restaurar setas quando fechar
+const _origCloseFull = closeFullImg;
+closeFullImg = function() {
+  const overlay = document.getElementById('arcadeFullImg');
+  overlay.querySelectorAll('.fullimg-nav').forEach(b => b.style.display = '');
+  overlay.dataset.singleImg = '';
+  _origCloseFull();
+};
+
+// =============================================
+// MOTOGP + SBK — Dynamic data from motogp-data.json
+// =============================================
+
+(function() {
+  const FLAG_MAP = {
+    TH:'🇹🇭',AR:'🇦🇷',US:'🇺🇸',QA:'🇶🇦',ES:'🇪🇸',FR:'🇫🇷',GB:'🇬🇧',
+    IT:'🇮🇹',NL:'🇳🇱',DE:'🇩🇪',CZ:'🇨🇿',AT:'🇦🇹',HU:'🇭🇺',SM:'🇸🇲',
+    JP:'🇯🇵',ID:'🇮🇩',AU:'🇦🇺',MY:'🇲🇾',PT:'🇵🇹',IN:'🇮🇳',BR:'🇧🇷',
+    FI:'🇫🇮',ZA:'🇿🇦',SA:'🇸🇦',AE:'🇦🇪',TR:'🇹🇷',KR:'🇰🇷',CN:'🇨🇳'
+  };
+
+  function flag(iso) { return FLAG_MAP[iso] || '🏁'; }
+
+  function formatDates(start, end) {
+    if (!start) return '';
+    var opts = { day: 'numeric', month: 'short' };
+    var s = new Date(start + 'T00:00:00');
+    var e = end ? new Date(end + 'T00:00:00') : null;
+    if (e && s.getMonth() === e.getMonth()) {
+      return s.getDate() + '–' + e.toLocaleDateString('pt-PT', opts);
+    }
+    if (e) {
+      return s.toLocaleDateString('pt-PT', opts) + ' – ' + e.toLocaleDateString('pt-PT', opts);
+    }
+    return s.toLocaleDateString('pt-PT', opts);
+  }
+
+  function renderStandings(blockId, title, standings, updated) {
+    var block = document.getElementById(blockId);
+    if (!standings || !standings.length) {
+      block.innerHTML = '<h4>🏆 ' + title + '</h4>' +
+        '<div class="motogp-fallback">A temporada ainda não começou. Classificação disponível após a primeira corrida.</div>';
+      return;
+    }
+    var html = '<h4>🏆 ' + title + '</h4>';
+    html += '<table class="standings-table"><thead><tr>';
+    html += '<th>Pos</th><th>#</th><th>Piloto</th><th>Equipa</th><th>Vit.</th><th style="text-align:right">Pts</th>';
+    html += '</tr></thead><tbody>';
+    standings.forEach(function(r) {
+      html += '<tr class="pos-' + r.position + '">';
+      html += '<td class="pos">' + r.position + '</td>';
+      html += '<td class="rider-num">' + r.number + '</td>';
+      html += '<td class="rider-name">' + flag(r.country_iso) + ' ' + r.rider + '</td>';
+      html += '<td class="team-name">' + (r.team || '') + '</td>';
+      html += '<td class="wins-col">' + r.wins + '</td>';
+      html += '<td class="pts">' + r.points + '</td>';
+      html += '</tr>';
+    });
+    html += '</tbody></table>';
+    if (updated) html += '<p class="standings-updated">Atualizado: ' + updated + '</p>';
+    block.innerHTML = html;
+  }
+
+  function renderCalendar(calBlockId, title, calendar) {
+    var calBlock = document.getElementById(calBlockId);
+    calBlock.querySelector('h4').textContent = title;
+    var container = calBlock.querySelector('.calendar-list');
+    if (!calendar || !calendar.length) {
+      container.innerHTML = '<div class="motogp-fallback">Sem dados de calendário.</div>';
+      return;
+    }
+    var nextFound = false;
+    var html = '';
+    calendar.forEach(function(ev) {
+      var cls = 'calendar-item';
+      if (ev.finished) {
+        cls += ' finished';
+      } else if (!nextFound) {
+        cls += ' next-race';
+        nextFound = true;
+      }
+      html += '<div class="' + cls + '">';
+      html += '<span class="flag">' + flag(ev.country_iso) + '</span>';
+      html += '<div class="race-info">';
+      html += '<div class="race-name">' + ev.circuit + '</div>';
+      html += '<div class="race-dates">' + formatDates(ev.date_start, ev.date_end) + '</div>';
+      html += '</div></div>';
+    });
+    container.innerHTML = html;
+  }
+
+  // Tab switching
+  document.querySelectorAll('.champ-tab').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.champ-tab').forEach(function(t) { t.classList.remove('active'); });
+      document.querySelectorAll('.champ-panel').forEach(function(p) { p.classList.remove('active'); });
+      btn.classList.add('active');
+      document.getElementById('panel-' + btn.dataset.tab).classList.add('active');
+    });
+  });
+
+  fetch('motogp-data.json')
+    .then(function(r) { return r.json(); })
+    .then(function(data) {
+      // MotoGP
+      renderStandings('motogpStandings', 'CLASSIFICAÇÃO MOTOGP ' + data.season, data.standings, data.updated);
+      renderCalendar('motogpCalendar', '📅 CALENDÁRIO MOTOGP ' + data.season + ' — TODOS OS GRANDES PRÉMIOS', data.calendar);
+      // SBK
+      var sbk = data.sbk || {};
+      renderStandings('sbkStandings', 'CLASSIFICAÇÃO WORLDSBK ' + data.season, sbk.standings, data.updated);
+      renderCalendar('sbkCalendar', '📅 CALENDÁRIO WORLDSBK ' + data.season + ' — TODAS AS RONDAS', sbk.calendar);
+    })
+    .catch(function() {
+      var block = document.getElementById('motogpStandings');
+      block.innerHTML = '<h4>🏆 CLASSIFICAÇÃO DO CAMPEONATO</h4>' +
+        '<div class="motogp-fallback">Dados não disponíveis. Corre <code>python update-motogp.py</code> para atualizar.</div>';
+      var cal = document.querySelector('#motogpCalendar .calendar-list');
+      cal.innerHTML = '<div class="motogp-fallback">Calendário não disponível. Corre <code>python update-motogp.py</code> para atualizar.</div>';
+      var sbkBlock = document.getElementById('sbkStandings');
+      sbkBlock.innerHTML = '<h4>🏆 CLASSIFICAÇÃO WORLDSBK</h4>' +
+        '<div class="motogp-fallback">Dados não disponíveis. Corre <code>python update-motogp.py</code> para atualizar.</div>';
+      var sbkCal = document.querySelector('#sbkCalendar .calendar-list');
+      sbkCal.innerHTML = '<div class="motogp-fallback">Calendário não disponível. Corre <code>python update-motogp.py</code> para atualizar.</div>';
+    });
+})();
+
+// === OLIVEIRA PHOTOS CHECK ===
+document.querySelectorAll('.victory-img').forEach(function(div) {
+  var bg = div.style.backgroundImage;
+  var match = bg.match(/url\(['"]?([^'")+]+)['"]?\)/);
+  if (match) {
+    var img = new Image();
+    img.onload = function() { div.classList.add('has-photo'); };
+    img.src = match[1];
+  }
+});
+
+// === MATERIAIS DIDATICOS ===
+(function() {
+  var PW_HASH = 'ae18fcd994c132dace4258cb2140329a57b2257301fdcbf2b0b4a0ff9d583b31';
+
+  document.querySelectorAll('.material-header').forEach(function(header) {
+    header.addEventListener('click', function() {
+      header.closest('.material-card').classList.toggle('expanded');
+    });
+  });
+
+  document.querySelectorAll('.btn-download').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var pwBox = btn.closest('.material-body').querySelector('.material-password');
+      pwBox.style.display = pwBox.style.display === 'none' ? 'flex' : 'none';
+      if (pwBox.style.display === 'flex') {
+        pwBox.querySelector('input').focus();
+      }
+    });
+  });
+
+  document.querySelectorAll('.btn-confirm').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      checkMaterialPassword(btn);
+    });
+  });
+
+  document.querySelectorAll('.material-password input').forEach(function(input) {
+    input.addEventListener('keydown', function(e) {
+      if (e.key === 'Enter') {
+        checkMaterialPassword(input.closest('.material-password').querySelector('.btn-confirm'));
+      }
+    });
+  });
+
+  function checkMaterialPassword(confirmBtn) {
+    var pwBox = confirmBtn.closest('.material-password');
+    var input = pwBox.querySelector('input');
+    var errMsg = pwBox.querySelector('.pw-error');
+    var card = confirmBtn.closest('.material-card');
+    var zipPath = card.getAttribute('data-zip');
+    var pw = input.value;
+
+    crypto.subtle.digest('SHA-256', new TextEncoder().encode(pw)).then(function(buf) {
+      var hash = Array.from(new Uint8Array(buf)).map(function(b) {
+        return b.toString(16).padStart(2, '0');
+      }).join('');
+
+      if (hash === PW_HASH) {
+        errMsg.style.display = 'none';
+        window.location.href = zipPath;
+      } else {
+        errMsg.style.display = 'inline';
+        input.value = '';
+        input.focus();
+      }
+    });
+  }
+})();
+
+// === SMOOTH SCROLL ===
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    e.preventDefault();
+    const target = document.querySelector(a.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({behavior: 'smooth', block: 'start'});
+      document.getElementById('navLinks').classList.remove('open');
+    }
+  });
+});
+
+// === CONTACT FORM (Web3Forms API) ===
+async function submitContactForm(e) {
+  e.preventDefault();
+  const form = document.getElementById("contactForm");
+  const btn = document.getElementById("cf-submit");
+  const status = document.getElementById("cf-status");
+
+  btn.disabled = true;
+  btn.textContent = "A enviar...";
+  status.textContent = "";
+  status.style.color = "";
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(["https://","api.","web3","forms",".com","/sub","mit"].join(""), {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+
+    if (data.success) {
+      status.textContent = "✓ Mensagem enviada com sucesso! Em breve recebera resposta.";
+      status.style.color = "var(--accent-green, #00ff88)";
+      form.reset();
+      btn.textContent = "Enviar Mensagem →";
+    } else {
+      throw new Error(data.message || "Erro desconhecido");
+    }
+  } catch (err) {
+    status.textContent = "✗ Erro ao enviar. Tenta novamente ou contacta diretamente por email.";
+    status.style.color = "var(--accent-red, #e10600)";
+    btn.textContent = "Enviar Mensagem →";
+  } finally {
+    btn.disabled = false;
+  }
+  return false;
+}
+
+// === EMAIL OBFUSCATION (anti-spam) ===
+document.addEventListener('DOMContentLoaded', function() {
+  document.querySelectorAll('[data-mail]').forEach(function(el) {
+    const user = el.dataset.user || 'mail';
+    const domain = el.dataset.domain || 'josealves.org';
+    const addr = user + '@' + domain;
+    el.href = 'mailto:' + addr + (el.dataset.subject ? '?subject=' + el.dataset.subject : '');
+    const txt = el.querySelector('.email-text');
+    if (txt) txt.textContent = addr;
+  });
+});
+
+
+
+// REQUEST ACCESS MODAL
+function openRequestModal(projectName) {
+  const modal = document.getElementById("requestModal");
+  document.querySelector("#requestModalSubtitle strong").textContent = projectName;
+  document.getElementById("requestForm").reset();
+  document.getElementById("rf-projeto").value = projectName;
+  document.getElementById("rf-subject").value = "[Site] Pedido de acesso: " + projectName;
+  document.getElementById("rf-status").textContent = "";
+  modal.classList.add("open");
+  document.body.style.overflow = "hidden";
+  setTimeout(function() { document.getElementById("rf-nome").focus(); }, 100);
+}
+
+function closeRequestModal() {
+  document.getElementById("requestModal").classList.remove("open");
+  document.body.style.overflow = "";
+}
+
+document.addEventListener("keydown", function(e) {
+  if (e.key === "Escape" && document.getElementById("requestModal") && document.getElementById("requestModal").classList.contains("open")) {
+    closeRequestModal();
+  }
+});
+
+async function submitRequestForm(e) {
+  e.preventDefault();
+  const form = document.getElementById("requestForm");
+  const btn = document.getElementById("rf-submit");
+  const status = document.getElementById("rf-status");
+
+  btn.disabled = true;
+  btn.textContent = "A enviar...";
+  status.textContent = "";
+
+  const formData = new FormData(form);
+
+  try {
+    const response = await fetch(["https://","api.","web3","forms",".com","/sub","mit"].join(""), {
+      method: "POST",
+      body: formData,
+    });
+    const data = await response.json();
+
+    if (data.success) {
+      status.textContent = "✓ Pedido enviado! Receberas resposta brevemente.";
+      status.style.color = "var(--accent-green, #00ff88)";
+      btn.textContent = "Enviar Pedido";
+      setTimeout(function() { closeRequestModal(); }, 2000);
+    } else {
+      throw new Error(data.message || "Erro");
+    }
+  } catch (err) {
+    status.textContent = "✗ Erro ao enviar. Tenta novamente.";
+    status.style.color = "var(--accent-red, #e10600)";
+    btn.textContent = "Enviar Pedido";
+  } finally {
+    btn.disabled = false;
+  }
+  return false;
+}
+
+// === MUSIC PLAYER ===
+function toggleMusic() {
+  const audio = document.getElementById('bgMusic');
+  const btn = document.getElementById('musicBtn');
+  if (audio.paused) {
+    audio.volume = 0.3;
+    audio.play();
+    btn.textContent = '♫';
+    btn.classList.add('playing');
+  } else {
+    audio.pause();
+    btn.textContent = '♪';
+    btn.classList.remove('playing');
+  }
+}
+</script>
+
+</body>
+</html>

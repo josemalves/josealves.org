@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WorldSkills Santa Maria da Feira | José Alves</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --accent-red: #e10600;
+            --accent-orange: #ff6b35;
+            --accent-yellow: #ffd700;
+            --accent-cyan: #00d4ff;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888aa;
+            --text-muted: #555570;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+        }
+
+        body::before {
+            content: '';
+            background-image: linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+            background-size: 60px 60px;
+            position: fixed;
+            inset: 0;
+            z-index: 0;
+            pointer-events: none;
+        }
+
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 4px;
+            height: 100%;
+            background: linear-gradient(to bottom, var(--accent-red), var(--accent-orange), var(--accent-yellow), var(--accent-red));
+            z-index: 1000;
+        }
+
+        .back-button {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.7rem;
+            letter-spacing: 2px;
+            padding: 14px 24px;
+            background: rgba(225,6,0,0.1);
+            border: 1px solid rgba(225,6,0,0.3);
+            border-radius: 4px;
+            color: var(--text-primary);
+            text-decoration: none;
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 999;
+            transition: background 0.3s;
+        }
+
+        .back-button:hover {
+            background: rgba(225,6,0,0.2);
+        }
+
+        main {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 120px 2rem 4rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .event-header .date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--accent-red);
+            letter-spacing: 3px;
+            text-transform: uppercase;
+            display: block;
+            margin-bottom: 1rem;
+        }
+
+        .event-header h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(1.8rem, 4vw, 3rem);
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+        }
+
+        .description {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 3rem;
+            max-width: 800px;
+        }
+
+        .gallery-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            letter-spacing: 1px;
+        }
+
+        .gallery-section h3 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            margin-bottom: 1rem;
+            margin-top: 2rem;
+            letter-spacing: 0.5px;
+        }
+
+        .gallery-section h3:first-of-type {
+            margin-top: 0;
+        }
+
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 1rem;
+            margin-bottom: 3rem;
+        }
+
+        .gallery-grid img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.05);
+            transition: transform 0.4s;
+            cursor: pointer;
+        }
+
+        .gallery-grid img:hover {
+            transform: scale(1.03);
+        }
+
+        footer {
+            text-align: center;
+            padding: 2rem;
+            border-top: 1px solid rgba(255,255,255,0.03);
+            margin-top: 2rem;
+        }
+
+        footer p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.65rem;
+            color: var(--text-muted);
+            letter-spacing: 1px;
+        }
+
+        @media (max-width: 600px) {
+            main {
+                padding: 100px 1.5rem 3rem;
+            }
+
+            .gallery-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .gallery-grid img {
+                height: 200px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <a href="jose-site.html#percurso" class="back-button">&larr; Voltar ao Percurso</a>
+
+    <main>
+        <div class="event-header">
+            <span class="date">Outubro 2024</span>
+            <h1>WorldSkills Santa Maria da Feira</h1>
+        </div>
+
+        <p class="description">Competição nacional WorldSkills em Santa Maria da Feira. Participei como júri e expert na prova de IT Network Systems Administration, tendo preparado e acompanhado um concorrente à competição — a consolidação de anos de trabalho e dedicação.</p>
+
+        <section class="gallery-section">
+            <h2>Galeria</h2>
+            <div class="gallery-grid">
+                <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/3448D261-B224-4B7F-A68B-00C878A7FFC5.jpg" alt="WorldSkills 2024">
+                <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/ca6d146e-642f-46cc-9598-a8499d134fd1.jpg" alt="WorldSkills 2024">
+                <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/IMG_3998.JPEG" alt="WorldSkills 2024">
+                <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/IMG_4003.JPEG" alt="WorldSkills 2024">
+                <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/IMG_4012.JPEG" alt="WorldSkills 2024">
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy; José Alves</p>
+        </footer>
+    </main>
+</body>
+</html>

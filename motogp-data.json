@@ -1,0 +1,577 @@
+{
+  "season": 2026,
+  "updated": "2026-06-11",
+  "standings": [
+    {
+      "position": 1,
+      "rider": "Marco Bezzecchi",
+      "number": 72,
+      "country_iso": "IT",
+      "team": "Aprilia Racing",
+      "constructor": "Aprilia",
+      "points": 180,
+      "wins": 4,
+      "podiums": 6
+    },
+    {
+      "position": 2,
+      "rider": "Jorge Martin",
+      "number": 89,
+      "country_iso": "ES",
+      "team": "Aprilia Racing",
+      "constructor": "Aprilia",
+      "points": 160,
+      "wins": 1,
+      "podiums": 4
+    },
+    {
+      "position": 3,
+      "rider": "Fabio Di Giannantonio",
+      "number": 49,
+      "country_iso": "IT",
+      "team": "Pertamina Enduro VR46 Racing Team",
+      "constructor": "Ducati",
+      "points": 138,
+      "wins": 1,
+      "podiums": 3
+    },
+    {
+      "position": 4,
+      "rider": "Pedro Acosta",
+      "number": 37,
+      "country_iso": "ES",
+      "team": "Red Bull KTM Factory Racing",
+      "constructor": "KTM",
+      "points": 132,
+      "wins": 0,
+      "podiums": 3
+    },
+    {
+      "position": 5,
+      "rider": "Marc Marquez",
+      "number": 93,
+      "country_iso": "ES",
+      "team": "Ducati Lenovo Team",
+      "constructor": "Ducati",
+      "points": 108,
+      "wins": 1,
+      "podiums": 1
+    },
+    {
+      "position": 6,
+      "rider": "Ai Ogura",
+      "number": 79,
+      "country_iso": "JP",
+      "team": "SuperFile Trackhouse MotoGP Team",
+      "constructor": "Aprilia",
+      "points": 105,
+      "wins": 0,
+      "podiums": 1
+    },
+    {
+      "position": 7,
+      "rider": "Francesco Bagnaia",
+      "number": 63,
+      "country_iso": "IT",
+      "team": "Ducati Lenovo Team",
+      "constructor": "Ducati",
+      "points": 99,
+      "wins": 0,
+      "podiums": 3
+    },
+    {
+      "position": 8,
+      "rider": "Raul Fernandez",
+      "number": 25,
+      "country_iso": "ES",
+      "team": "SuperFile Trackhouse MotoGP Team",
+      "constructor": "Aprilia",
+      "points": 93,
+      "wins": 0,
+      "podiums": 1
+    },
+    {
+      "position": 9,
+      "rider": "Alex Marquez",
+      "number": 73,
+      "country_iso": "ES",
+      "team": "BK8 Gresini Racing MotoGP",
+      "constructor": "Ducati",
+      "points": 67,
+      "wins": 1,
+      "podiums": 1
+    },
+    {
+      "position": 10,
+      "rider": "Fermin Aldeguer",
+      "number": 54,
+      "country_iso": "ES",
+      "team": "BK8 Gresini Racing MotoGP",
+      "constructor": "Ducati",
+      "points": 64,
+      "wins": 0,
+      "podiums": 1
+    }
+  ],
+  "calendar": [
+    {
+      "name": "PT Grand Prix of Thailand",
+      "short_name": "THA",
+      "circuit": "Buriram",
+      "circuit_name": "Chang International Circuit",
+      "country_iso": "TH",
+      "country_name": "Thailand",
+      "date_start": "2026-02-27",
+      "date_end": "2026-03-01",
+      "finished": true
+    },
+    {
+      "name": "Estrella Galicia 0,0 Grand Prix of Brazil",
+      "short_name": "BRA",
+      "circuit": "Goiania",
+      "circuit_name": "Autódromo Internacional de Goiânia - Ayrton Senna",
+      "country_iso": "BR",
+      "country_name": "Brazil",
+      "date_start": "2026-03-20",
+      "date_end": "2026-03-22",
+      "finished": true
+    },
+    {
+      "name": "Red Bull Grand Prix of The United States",
+      "short_name": "USA",
+      "circuit": "Austin",
+      "circuit_name": "Circuit Of The Americas",
+      "country_iso": "US",
+      "country_name": "United States of America",
+      "date_start": "2026-03-27",
+      "date_end": "2026-03-29",
+      "finished": true
+    },
+    {
+      "name": "Estrella Galicia 0,0 Grand Prix of Spain",
+      "short_name": "SPA",
+      "circuit": "Jerez de la Frontera",
+      "circuit_name": "Circuito de Jerez - Ángel Nieto",
+      "country_iso": "ES",
+      "country_name": "Spain",
+      "date_start": "2026-04-24",
+      "date_end": "2026-04-26",
+      "finished": true
+    },
+    {
+      "name": "Michelin Grand Prix of France",
+      "short_name": "FRA",
+      "circuit": "Le Mans",
+      "circuit_name": "Le Mans",
+      "country_iso": "FR",
+      "country_name": "France",
+      "date_start": "2026-05-08",
+      "date_end": "2026-05-10",
+      "finished": true
+    },
+    {
+      "name": "Monster Energy Grand Prix of Catalonia",
+      "short_name": "CAT",
+      "circuit": "Barcelona",
+      "circuit_name": "Circuit de Barcelona-Catalunya",
+      "country_iso": "ES",
+      "country_name": "Spain",
+      "date_start": "2026-05-15",
+      "date_end": "2026-05-17",
+      "finished": true
+    },
+    {
+      "name": "BREMBO GRAND PRIX OF ITALY ",
+      "short_name": "ITA",
+      "circuit": "Mugello",
+      "circuit_name": "Autodromo Internazionale del Mugello",
+      "country_iso": "IT",
+      "country_name": "Italy",
+      "date_start": "2026-05-29",
+      "date_end": "2026-05-31",
+      "finished": true
+    },
+    {
+      "name": "GRAND PRIX OF HUNGARY ",
+      "short_name": "HUN",
+      "circuit": "\tBalatonfokajár",
+      "circuit_name": "Balaton Park Circuit",
+      "country_iso": "HU",
+      "country_name": "Hungary",
+      "date_start": "2026-06-05",
+      "date_end": "2026-06-07",
+      "finished": true
+    },
+    {
+      "name": "MONSTER ENERGY GRAND PRIX OF CZECHIA ",
+      "short_name": "CZE",
+      "circuit": "Brno",
+      "circuit_name": "Automotodrom Brno",
+      "country_iso": "CZ",
+      "country_name": "Czechia",
+      "date_start": "2026-06-19",
+      "date_end": "2026-06-21",
+      "finished": false
+    },
+    {
+      "name": "TISSOT GRAND PRIX OF THE NETHERLANDS ",
+      "short_name": "NED",
+      "circuit": "Assen",
+      "circuit_name": "TT Circuit Assen",
+      "country_iso": "NL",
+      "country_name": "Netherlands",
+      "date_start": "2026-06-26",
+      "date_end": "2026-06-28",
+      "finished": false
+    },
+    {
+      "name": "Liqui Moly Grand Prix of Germany",
+      "short_name": "GER",
+      "circuit": "Sachsenring",
+      "circuit_name": "Sachsenring",
+      "country_iso": "DE",
+      "country_name": "Germany",
+      "date_start": "2026-07-10",
+      "date_end": "2026-07-12",
+      "finished": false
+    },
+    {
+      "name": "QATAR AIRWAYS GRAND PRIX OF GREAT BRITAIN ",
+      "short_name": "GBR",
+      "circuit": "Silverstone",
+      "circuit_name": "Silverstone Circuit",
+      "country_iso": "GB",
+      "country_name": "United Kingdom of Great Britain and Northern Ireland",
+      "date_start": "2026-08-07",
+      "date_end": "2026-08-09",
+      "finished": false
+    },
+    {
+      "name": "GRAND PRIX OF ARAGON ",
+      "short_name": "ARA",
+      "circuit": "Alcañiz",
+      "circuit_name": "MotorLand Aragón",
+      "country_iso": "ES",
+      "country_name": "Spain",
+      "date_start": "2026-08-28",
+      "date_end": "2026-08-30",
+      "finished": false
+    },
+    {
+      "name": "Red Bull Grand Prix of San Marino and The Rimini Riviera",
+      "short_name": "RSM",
+      "circuit": "Misano Adriatico",
+      "circuit_name": "Misano World Circuit Marco Simoncelli",
+      "country_iso": "SM",
+      "country_name": "San Marino",
+      "date_start": "2026-09-11",
+      "date_end": "2026-09-13",
+      "finished": false
+    },
+    {
+      "name": "GRAND PRIX OF AUSTRIA ",
+      "short_name": "AUT",
+      "circuit": "Spielberg",
+      "circuit_name": "Red Bull Ring - Spielberg",
+      "country_iso": "AT",
+      "country_name": "Austria",
+      "date_start": "2026-09-18",
+      "date_end": "2026-09-20",
+      "finished": false
+    },
+    {
+      "name": "Motul Grand Prix of Japan",
+      "short_name": "JPN",
+      "circuit": "Motegi",
+      "circuit_name": "Mobility Resort Motegi",
+      "country_iso": "JP",
+      "country_name": "Japan",
+      "date_start": "2026-10-02",
+      "date_end": "2026-10-04",
+      "finished": false
+    },
+    {
+      "name": "Pertamina Grand Prix of Indonesia",
+      "short_name": "INA",
+      "circuit": "Lombok",
+      "circuit_name": "Pertamina Mandalika Circuit",
+      "country_iso": "ID",
+      "country_name": "Indonesia",
+      "date_start": "2026-10-09",
+      "date_end": "2026-10-11",
+      "finished": false
+    },
+    {
+      "name": "Grand Prix of Australia",
+      "short_name": "AUS",
+      "circuit": "Phillip Island",
+      "circuit_name": "Phillip Island",
+      "country_iso": "AU",
+      "country_name": "Australia",
+      "date_start": "2026-10-23",
+      "date_end": "2026-10-25",
+      "finished": false
+    },
+    {
+      "name": "Petronas Grand Prix of Malaysia",
+      "short_name": "MAL",
+      "circuit": "Sepang",
+      "circuit_name": "Petronas Sepang International Circuit",
+      "country_iso": "MY",
+      "country_name": "Malaysia",
+      "date_start": "2026-10-30",
+      "date_end": "2026-11-01",
+      "finished": false
+    },
+    {
+      "name": "Qatar Airways Grand Prix of Qatar",
+      "short_name": "QAT",
+      "circuit": "Doha",
+      "circuit_name": "Lusail International Circuit",
+      "country_iso": "QA",
+      "country_name": "Qatar",
+      "date_start": "2026-11-06",
+      "date_end": "2026-11-08",
+      "finished": false
+    },
+    {
+      "name": "Repsol Grand Prix of Portugal",
+      "short_name": "POR",
+      "circuit": "Portimao",
+      "circuit_name": "Autódromo Internacional do Algarve",
+      "country_iso": "PT",
+      "country_name": "Portugal",
+      "date_start": "2026-11-20",
+      "date_end": "2026-11-22",
+      "finished": false
+    },
+    {
+      "name": "Motul Grand Prix of Valencia",
+      "short_name": "VAL",
+      "circuit": "Cheste",
+      "circuit_name": "Circuit Ricardo Tormo",
+      "country_iso": "ES",
+      "country_name": "Spain",
+      "date_start": "2026-11-27",
+      "date_end": "2026-11-29",
+      "finished": false
+    }
+  ],
+  "sbk": {
+    "standings": [
+      {
+        "position": 1,
+        "rider": "Nicolò Bulega",
+        "number": 11,
+        "country_iso": "IT",
+        "team": "Aruba.it Racing - Ducati",
+        "points": 372,
+        "wins": 18
+      },
+      {
+        "position": 2,
+        "rider": "Iker Lecuona",
+        "number": 7,
+        "country_iso": "ES",
+        "team": "Aruba.it Racing - Ducati",
+        "points": 264,
+        "wins": 0
+      },
+      {
+        "position": 3,
+        "rider": "Sam Lowes",
+        "number": 14,
+        "country_iso": "GB",
+        "team": "Elf Marc VDS Racing Team",
+        "points": 142,
+        "wins": 0
+      },
+      {
+        "position": 4,
+        "rider": "Alex Lowes",
+        "number": 22,
+        "country_iso": "GB",
+        "team": "Bimota by Kawasaki Racing Team",
+        "points": 132,
+        "wins": 0
+      },
+      {
+        "position": 5,
+        "rider": "Yari Montella",
+        "number": 5,
+        "country_iso": "IT",
+        "team": "Barni Spark Racing Team",
+        "points": 131,
+        "wins": 0
+      },
+      {
+        "position": 6,
+        "rider": "Lorenzo Baldassarri",
+        "number": 34,
+        "country_iso": "IT",
+        "team": "Team PATA GoEleven",
+        "points": 117,
+        "wins": 0
+      },
+      {
+        "position": 7,
+        "rider": "Axel Bassani",
+        "number": 47,
+        "country_iso": "IT",
+        "team": "Bimota by Kawasaki Racing Team",
+        "points": 109,
+        "wins": 0
+      },
+      {
+        "position": 8,
+        "rider": "Álvaro Bautista",
+        "number": 19,
+        "country_iso": "ES",
+        "team": "Superbike Advocates Racing",
+        "points": 92,
+        "wins": 0
+      },
+      {
+        "position": 9,
+        "rider": "Miguel Oliveira",
+        "number": 88,
+        "country_iso": "PT",
+        "team": "BMW Motorrad WorldSBK Team",
+        "points": 85,
+        "wins": 0
+      },
+      {
+        "position": 10,
+        "rider": "Garrett Gerloff",
+        "number": 31,
+        "country_iso": "US",
+        "team": "Kawasaki WorldSBK Team",
+        "points": 85,
+        "wins": 0
+      }
+    ],
+    "calendar": [
+      {
+        "round": 1,
+        "name": "Australian Round",
+        "circuit": "Phillip Island",
+        "country_iso": "AU",
+        "date_start": "2026-02-20",
+        "date_end": "2026-02-22",
+        "finished": true,
+        "status": "finished"
+      },
+      {
+        "round": 2,
+        "name": "Portuguese Round",
+        "circuit": "Portimão",
+        "country_iso": "PT",
+        "date_start": "2026-03-27",
+        "date_end": "2026-03-29",
+        "finished": true,
+        "status": "finished"
+      },
+      {
+        "round": 3,
+        "name": "Dutch Round",
+        "circuit": "Assen",
+        "country_iso": "NL",
+        "date_start": "2026-04-17",
+        "date_end": "2026-04-19",
+        "finished": true,
+        "status": "finished"
+      },
+      {
+        "round": 4,
+        "name": "Hungarian Round",
+        "circuit": "Balaton Park",
+        "country_iso": "HU",
+        "date_start": "2026-05-01",
+        "date_end": "2026-05-03",
+        "finished": true,
+        "status": "finished"
+      },
+      {
+        "round": 5,
+        "name": "Czech Round",
+        "circuit": "Most",
+        "country_iso": "CZ",
+        "date_start": "2026-05-15",
+        "date_end": "2026-05-17",
+        "finished": true,
+        "status": "finished"
+      },
+      {
+        "round": 6,
+        "name": "Aragón Round",
+        "circuit": "Aragón",
+        "country_iso": "ES",
+        "date_start": "2026-05-29",
+        "date_end": "2026-05-31",
+        "finished": true,
+        "status": "finished"
+      },
+      {
+        "round": 7,
+        "name": "Emilia-Romagna Round",
+        "circuit": "Misano",
+        "country_iso": "SM",
+        "date_start": "2026-06-12",
+        "date_end": "2026-06-14",
+        "finished": false,
+        "status": "next"
+      },
+      {
+        "round": 8,
+        "name": "UK Round",
+        "circuit": "Donington Park",
+        "country_iso": "GB",
+        "date_start": "2026-07-10",
+        "date_end": "2026-07-12",
+        "finished": false,
+        "status": "upcoming"
+      },
+      {
+        "round": 9,
+        "name": "French Round",
+        "circuit": "Magny-Cours",
+        "country_iso": "FR",
+        "date_start": "2026-09-04",
+        "date_end": "2026-09-06",
+        "finished": false,
+        "status": "upcoming"
+      },
+      {
+        "round": 10,
+        "name": "Italian Round",
+        "circuit": "Cremona",
+        "country_iso": "IT",
+        "date_start": "2026-09-25",
+        "date_end": "2026-09-27",
+        "finished": false,
+        "status": "upcoming"
+      },
+      {
+        "round": 11,
+        "name": "Estoril Round",
+        "circuit": "Estoril",
+        "country_iso": "PT",
+        "date_start": "2026-10-09",
+        "date_end": "2026-10-11",
+        "finished": false,
+        "status": "upcoming"
+      },
+      {
+        "round": 12,
+        "name": "Spanish Round",
+        "circuit": "Jerez",
+        "country_iso": "ES",
+        "date_start": "2026-10-16",
+        "date_end": "2026-10-18",
+        "finished": false,
+        "status": "upcoming"
+      }
+    ],
+    "updated": "2026-06-11"
+  }
+}

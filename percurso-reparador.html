@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reparador de Informática | José Alves</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Rajdhani:wght@300;400;500;600;700&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0a0a0f;
+            --bg-secondary: #12121a;
+            --bg-card: #1a1a25;
+            --accent-red: #e10600;
+            --accent-orange: #ff6b35;
+            --accent-yellow: #ffd700;
+            --accent-cyan: #00d4ff;
+            --text-primary: #f0f0f5;
+            --text-secondary: #8888aa;
+            --text-muted: #555570;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Rajdhani', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-primary);
+            overflow-x: hidden;
+            min-height: 100vh;
+            background-image:
+                linear-gradient(rgba(225, 6, 0, 0.03) 1px, transparent 1px),
+                linear-gradient(90deg, rgba(225, 6, 0, 0.03) 1px, transparent 1px);
+            background-size: 50px 50px;
+        }
+
+        /* Back Button */
+        .back-btn {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            z-index: 100;
+            font-family: 'Orbitron', sans-serif;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: var(--accent-red);
+            text-decoration: none;
+            padding: 10px 18px;
+            border: 1px solid rgba(225, 6, 0, 0.4);
+            border-radius: 6px;
+            background: rgba(10, 10, 15, 0.9);
+            backdrop-filter: blur(10px);
+            transition: all 0.3s ease;
+            letter-spacing: 0.5px;
+        }
+
+        .back-btn:hover {
+            background: rgba(225, 6, 0, 0.15);
+            border-color: var(--accent-red);
+            box-shadow: 0 0 20px rgba(225, 6, 0, 0.3);
+        }
+
+        /* Main Container */
+        .page-container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 100px 30px 60px;
+        }
+
+        /* Event Header */
+        .event-header {
+            margin-bottom: 50px;
+        }
+
+        .event-date {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.9rem;
+            color: var(--accent-red);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            font-variant: small-caps;
+            margin-bottom: 12px;
+        }
+
+        .event-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-primary);
+            line-height: 1.2;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-cyan));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .event-title::after {
+            content: '';
+            display: block;
+            width: 80px;
+            height: 3px;
+            background: linear-gradient(90deg, var(--accent-red), var(--accent-orange));
+            margin-top: 20px;
+            border-radius: 2px;
+        }
+
+        /* Description Section */
+        .description-section {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 12px;
+            padding: 35px;
+            margin-bottom: 50px;
+        }
+
+        .description-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 18px;
+        }
+
+        .description-section p {
+            font-size: 1.15rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            text-align: justify;
+        }
+
+        /* Photo Gallery */
+        .gallery-section {
+            margin-bottom: 50px;
+        }
+
+        .gallery-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .photo-gallery {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+        }
+
+        .photo-gallery img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.4s ease;
+            cursor: pointer;
+        }
+
+        .photo-gallery img:hover {
+            transform: scale(1.05);
+            border-color: var(--accent-cyan);
+            box-shadow: 0 8px 30px rgba(0, 212, 255, 0.15);
+        }
+
+        /* Video Section */
+        .video-section {
+            margin-bottom: 50px;
+        }
+
+        .video-section h2 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--accent-cyan);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 25px;
+        }
+
+        .video-container {
+            background: var(--bg-card);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+        }
+
+        .video-container video {
+            width: 100%;
+            max-width: 100%;
+            border-radius: 10px;
+            display: block;
+        }
+
+        .video-note {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--accent-orange);
+            margin-top: 15px;
+            padding: 10px 15px;
+            background: rgba(255, 107, 53, 0.08);
+            border-left: 3px solid var(--accent-orange);
+            border-radius: 0 6px 6px 0;
+            text-align: left;
+        }
+
+        /* Footer */
+        .page-footer {
+            text-align: center;
+            padding: 40px 0 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: 60px;
+        }
+
+        .page-footer p {
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-container {
+                padding: 90px 18px 40px;
+            }
+
+            .event-title {
+                font-size: 1.8rem;
+            }
+
+            .back-btn {
+                font-size: 0.65rem;
+                padding: 8px 14px;
+                top: 12px;
+                left: 12px;
+            }
+
+            .description-section {
+                padding: 22px;
+            }
+
+            .photo-gallery {
+                grid-template-columns: 1fr;
+            }
+
+            .photo-gallery img {
+                height: 220px;
+            }
+
+            .video-container {
+                padding: 15px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <a href="jose-site.html#percurso" class="back-btn">&#8592; Voltar ao Percurso</a>
+
+    <div class="page-container">
+
+        <div class="event-header">
+            <p class="event-date">2018 — Presente</p>
+            <h1 class="event-title">Reparador de Informática</h1>
+        </div>
+
+        <div class="description-section">
+            <h2>Sobre o Curso</h2>
+            <p>Curso que leciono desde 2018, com início no Projeto Entreajuda e que continua até hoje. Formação prática em diagnóstico, montagem e reparação de equipamentos informáticos. Aqui ficam algumas fotos das turmas que passaram por esta formação.</p>
+        </div>
+
+        <div class="gallery-section">
+            <h2>Galeria de Fotos</h2>
+            <div class="photo-gallery">
+                <img src="Formacao/2018_09 Reparador Informatica/20180329_162646.jpg" alt="Reparador de Informática - Foto 1" loading="lazy">
+                <img src="Formacao/2018_09 Reparador Informatica/20180329_162845.jpg" alt="Reparador de Informática - Foto 2" loading="lazy">
+                <img src="Formacao/2018_09 Reparador Informatica/G0010221.JPG" alt="Reparador de Informática - Foto 3" loading="lazy">
+            </div>
+        </div>
+
+        <div class="video-section">
+            <h2>Vídeo</h2>
+            <div class="video-container">
+                <video controls>
+                    <source src="Formacao/2018_09 Reparador Informatica/Reparador Informática.mp4" type="video/mp4">
+                    O seu browser não suporta a reprodução de vídeo.
+                </video>
+            </div>
+        </div>
+
+        <footer class="page-footer">
+            <p>&copy; 2025 José Alves</p>
+        </footer>
+
+    </div>
+
+</body>
+</html>
