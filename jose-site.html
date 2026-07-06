@@ -6,7 +6,6 @@
 <title>José Alves | Engenheiro & Formador</title>
 <meta name="description" content="Formador certificado no IEFP com 10.000+ horas, engenheiro de sistemas embebidos e licenciado em Engenharia Eletrotécnica e de Computadores. Vila Nova de Gaia, Portugal.">
 <meta name="author" content="José Alves">
-<meta name="keywords" content="José Alves, formador, IEFP, engenheiro, sistemas embebidos, ESP32, Arduino, CCNA, Vila Nova de Gaia">
 
 <!-- Open Graph (Facebook, WhatsApp, LinkedIn) -->
 <meta property="og:type" content="website">
@@ -42,6 +41,7 @@
 {
   "@context": "https://schema.org",
   "@type": "Person",
+  "@id": "https://www.josealves.org/#jose",
   "name": "José Alves",
   "alternateName": "José Silva Alves",
   "url": "https://www.josealves.org",
@@ -74,6 +74,43 @@
     "https://www.instagram.com/jmsa.alves",
     "https://github.com/josemalves"
   ]
+}
+</script>
+
+<!-- Schema.org / JSON-LD: ProfilePage + Serviço de Formação (SEO local Gaia/Porto) -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "dateModified": "2026-07-06",
+  "mainEntity": { "@id": "https://www.josealves.org/#jose" }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Formação em IT e Redes — José Alves",
+  "url": "https://www.josealves.org",
+  "areaServed": ["Vila Nova de Gaia", "Porto", "Portugal"],
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Vila Nova de Gaia",
+    "addressRegion": "Porto",
+    "addressCountry": "PT"
+  },
+  "knowsAbout": ["CCNA", "Redes Cisco", "Cibersegurança", "Sistemas Embebidos", "Formação Profissional"],
+  "provider": { "@type": "Person", "name": "José Alves", "url": "https://www.josealves.org" },
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Áreas de Formação",
+    "itemListElement": [
+      { "@type": "Course", "name": "Redes Cisco (CCNA)", "provider": { "@type": "Person", "name": "José Alves", "url": "https://www.josealves.org" } },
+      { "@type": "Course", "name": "Cibersegurança", "provider": { "@type": "Person", "name": "José Alves", "url": "https://www.josealves.org" } },
+      { "@type": "Course", "name": "Hardware e Reparação de Computadores", "provider": { "@type": "Person", "name": "José Alves", "url": "https://www.josealves.org" } },
+      { "@type": "Course", "name": "Literacia Digital", "provider": { "@type": "Person", "name": "José Alves", "url": "https://www.josealves.org" } }
+    ]
+  }
 }
 </script>
 <style>
@@ -2429,19 +2466,20 @@ footer {
   <div class="hero-content">
     <div class="hero-badge">ONLINE &amp; DISPONÍVEL</div>
     <h1 class="hero-name">JOSÉ ALVES</h1>
+    <p class="hero-subtitle sr-only">Engenheiro de Sistemas Embebidos e Formador de IT em Vila Nova de Gaia / Porto</p>
     <p class="hero-title">Engenheiro <span>·</span> Formador <span>·</span> Maker</p>
     
     <div class="hero-stats">
       <div class="hero-stat">
-        <span class="hero-stat-number" data-target="10000">0</span>
+        <span class="hero-stat-number" data-target="10000">10.000+</span>
         <span class="hero-stat-label">Horas Formação</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number" data-target="14">0</span>
+        <span class="hero-stat-number" data-target="14">14+</span>
         <span class="hero-stat-label">Certificações</span>
       </div>
       <div class="hero-stat">
-        <span class="hero-stat-number" data-target="15">0</span>
+        <span class="hero-stat-number" data-target="15">15+</span>
         <span class="hero-stat-label">Anos Experiência</span>
       </div>
     </div>
@@ -2564,7 +2602,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-entreajuda.html" class="timeline-card highlight">
-          <img src="Formacao/2018_09 Projecto Entreajuda/entreajuda-thumb.jpg" alt="Projeto Entreajuda">
+          <img src="Formacao/2018_09 Projecto Entreajuda/entreajuda-thumb.jpg" alt="Projeto Entreajuda" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Setembro 2018</span>
             <h4>Projeto Entreajuda</h4>
@@ -2577,7 +2615,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-reparador.html" class="timeline-card">
-          <img src="Formacao/2018_09 Reparador Informatica/20180329_162646.jpg" alt="Curso Reparador de Informática">
+          <img src="Formacao/2018_09 Reparador Informatica/20180329_162646.jpg" alt="Curso Reparador de Informática" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">2018 — Presente</span>
             <h4>Reparador de Informática</h4>
@@ -2590,7 +2628,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-summit1.html" class="timeline-card">
-          <img src="Formacao/2020_02 Summit 1.0/IMG_4069.JPEG" alt="Summit 1.0">
+          <img src="Formacao/2020_02 Summit 1.0/IMG_4069.JPEG" alt="Summit 1.0" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Fevereiro 2020</span>
             <h4>Summit 1.0</h4>
@@ -2603,7 +2641,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-dedicatoria.html" class="timeline-card">
-          <img src="Formacao/2020_07_Dedicatoria/dedicatoria-thumb.jpg" alt="Dedicatória dos Alunos">
+          <img src="Formacao/2020_07_Dedicatoria/dedicatoria-thumb.jpg" alt="Dedicatória dos Alunos" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Julho 2020</span>
             <h4>Dedicatória dos Alunos</h4>
@@ -2616,7 +2654,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-summit2.html" class="timeline-card">
-          <img src="Formacao/2021_05 Summit 2.0/188226754_1045294975878473_147232193223794508_n.jpg" alt="Summit 2.0">
+          <img src="Formacao/2021_05 Summit 2.0/188226754_1045294975878473_147232193223794508_n.jpg" alt="Summit 2.0" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Maio 2021</span>
             <h4>Summit 2.0</h4>
@@ -2629,7 +2667,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-cisco.html" class="timeline-card">
-          <img src="Formacao/2022 Cisco/IMG_2769.JPEG" alt="Cisco 2022">
+          <img src="Formacao/2022 Cisco/IMG_2769.JPEG" alt="Cisco 2022" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">2022 — Presente</span>
             <h4>Academia Cisco</h4>
@@ -2642,7 +2680,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-qsp.html" class="timeline-card">
-          <img src="Formacao/2022_06 QSPSUmmit/IMG_5311.JPEG" alt="QSP Summit 2022">
+          <img src="Formacao/2022_06 QSPSUmmit/IMG_5311.JPEG" alt="QSP Summit 2022" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Junho 2022</span>
             <h4>QSP Summit</h4>
@@ -2655,7 +2693,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-skills-digital.html" class="timeline-card">
-          <img src="Formacao/2022_09 Skills_Digital/_MG_9638.JPG" alt="Skills Digital 2022">
+          <img src="Formacao/2022_09 Skills_Digital/_MG_9638.JPG" alt="Skills Digital 2022" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Setembro 2022</span>
             <h4>Skills Digital</h4>
@@ -2668,7 +2706,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-ws2023.html" class="timeline-card">
-          <img src="Formacao/2023_05 WorldSkills 2023 Portimao/IMG_7362.JPEG" alt="WorldSkills Portimão">
+          <img src="Formacao/2023_05 WorldSkills 2023 Portimao/IMG_7362.JPEG" alt="WorldSkills Portimão" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Maio 2023</span>
             <h4>WorldSkills Portimão</h4>
@@ -2681,7 +2719,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-ws2024.html" class="timeline-card">
-          <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/IMG_3998.JPEG" alt="WorldSkills 2024">
+          <img src="Formacao/2024_10 WorldSkills 2024 Santa maria feira/IMG_3998.JPEG" alt="WorldSkills 2024" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Outubro 2024</span>
             <h4>WorldSkills Santa Maria da Feira</h4>
@@ -2694,7 +2732,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-summit3.html" class="timeline-card">
-          <img src="Formacao/2025_05 Summit 3.0/1103ACBB-ABC9-4E06-8AC1-65FC4E721270.JPEG" alt="Summit 3.0">
+          <img src="Formacao/2025_05 Summit 3.0/1103ACBB-ABC9-4E06-8AC1-65FC4E721270.JPEG" alt="Summit 3.0" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Maio 2025</span>
             <h4>Summit 3.0</h4>
@@ -2707,7 +2745,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-portalegre.html" class="timeline-card">
-          <img src="Formacao/2025_07 WorldSkill Europeu preparaçao portalegre/3a3fa56f-008b-43cc-9fef-29f69014c19a.JPEG" alt="Preparação Europeia Portalegre">
+          <img src="Formacao/2025_07 WorldSkill Europeu preparaçao portalegre/3a3fa56f-008b-43cc-9fef-29f69014c19a.JPEG" alt="Preparação Europeia Portalegre" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Julho 2025</span>
             <h4>Preparação Europeia — Portalegre</h4>
@@ -2720,7 +2758,7 @@ footer {
       <div class="timeline-item reveal">
         <div class="timeline-dot"></div>
         <a href="percurso-dinamarca.html" class="timeline-card">
-          <img src="Formacao/2025_09 WorldSkills Dinamarca/IMG_6619.JPEG" alt="WorldSkills Dinamarca">
+          <img src="Formacao/2025_09 WorldSkills Dinamarca/IMG_6619.JPEG" alt="WorldSkills Dinamarca" loading="lazy">
           <div class="timeline-card-body">
             <span class="timeline-date">Setembro 2025</span>
             <h4>WorldSkills Dinamarca</h4>
@@ -3380,6 +3418,8 @@ window.addEventListener('scroll', () => {
 
 // === COUNTER ANIMATION ===
 function animateCounters() {
+  // Respeita prefers-reduced-motion: mantém os números reais já no HTML
+  if (window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
   document.querySelectorAll('.hero-stat-number').forEach(el => {
     const target = parseInt(el.dataset.target);
     const duration = 2000;
