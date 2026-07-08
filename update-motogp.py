@@ -102,7 +102,7 @@ _SBK_ISO3 = {
     "ITA": "it", "TUR": "tr", "ESP": "es", "GBR": "gb", "NED": "nl", "FRA": "fr",
     "USA": "us", "GER": "de", "AUS": "au", "RSA": "za", "POR": "pt", "CZE": "cz",
     "JPN": "jp", "IRL": "ie", "BRA": "br", "ARG": "ar", "CAN": "ca", "SUI": "ch",
-    "AUT": "at", "BEL": "be", "IND": "in", "THA": "th", "MYS": "my",
+    "AUT": "at", "BEL": "be", "IND": "in", "THA": "th", "MYS": "my", "HUN": "hu", "SMR": "sm",
 }
 
 
@@ -162,17 +162,47 @@ def fetch_sbk_standings():
     return standings
 
 
-def fetch_sbk_data():
-    """Retorna dados SBK: calendário hardcoded + standings (se disponíveis)."""
-    today = date.today().isoformat()
+def fetch_sbk_calendar():
+    """Calendario WorldSBK via API oficial; lista vazia em caso de falha."""
     calendar = []
-    for ev in SBK_CALENDAR_2026:
-        calendar.append({
-            **ev,
-            "finished": ev["date_end"] < today,
-        })
+    try:
+        data = _sbk_get(f"/wsbk-events/v1/seasons/{YEAR}/rounds")
+        today = date.today().isoformat()
+        for r in data.get("data", []):
+            cats = [c.get("id") for c in
+                    r.get("relationships", {}).get("categories", {}).get("data", [])]
+            if "SBK" not in cats:
+                continue
+            a = r.get("attributes", {})
+            ds = (a.get("start_date") or "")[:10]
+            de = (a.get("end_date") or "")[:10]
+            calendar.append({
+                "round": a.get("sequence_order", 0),
+                "name": a.get("description") or a.get("name", ""),
+                "circuit": a.get("brief_description", ""),
+                "country_iso": _SBK_ISO3.get(a.get("country_iso", ""), ""),
+                "date_start": ds,
+                "date_end": de,
+                "finished": a.get("status") == "FINISHED" or (de != "" and de < today),
+            })
+        calendar.sort(key=lambda e: (e["round"] or 99, e["date_start"]))
+    except Exception as e:
+        print(f"  [SBK] Nao foi possivel obter calendario: {e}")
+    return calendar
 
-    print("  A buscar classificação SBK...")
+
+def fetch_sbk_data():
+    """Dados SBK: calendario + standings via API oficial (fallback hardcoded)."""
+    print("  A buscar calendario SBK...")
+    calendar = fetch_sbk_calendar()
+    if calendar:
+        print(f"  -> {len(calendar)} rondas (API)")
+    else:
+        today = date.today().isoformat()
+        calendar = [dict(ev, finished=ev["date_end"] < today) for ev in SBK_CALENDAR_2026]
+        print(f"  -> {len(calendar)} rondas (fallback hardcoded)")
+
+    print("  A buscar classificacao SBK...")
     standings = fetch_sbk_standings()
     print(f"  -> {len(standings)} pilotos SBK encontrados")
 
