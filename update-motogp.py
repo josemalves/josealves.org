@@ -96,52 +96,69 @@ def fetch_standings(season_uuid, category_uuid):
     return standings
 
 
+SBK_API = "https://api.pulselive.worldsbk.com"
+# ISO3 (API WorldSBK) -> ISO2 (para bandeiras); desconhecido -> ""
+_SBK_ISO3 = {
+    "ITA": "it", "TUR": "tr", "ESP": "es", "GBR": "gb", "NED": "nl", "FRA": "fr",
+    "USA": "us", "GER": "de", "AUS": "au", "RSA": "za", "POR": "pt", "CZE": "cz",
+    "JPN": "jp", "IRL": "ie", "BRA": "br", "ARG": "ar", "CAN": "ca", "SUI": "ch",
+    "AUT": "at", "BEL": "be", "IND": "in", "THA": "th", "MYS": "my",
+}
+
+
+def _sbk_get(path):
+    req = urllib.request.Request(SBK_API + path, headers={
+        "Accept": "application/json",
+        "User-Agent": "Mozilla/5.0",
+    })
+    with urllib.request.urlopen(req, timeout=15) as resp:
+        return json.loads(resp.read().decode())
+
+
 def fetch_sbk_standings():
-    """Tenta buscar standings SBK via scraping do site worldsbk.com."""
+    """Standings WorldSBK via API oficial PulseLive (api.pulselive.worldsbk.com)."""
     standings = []
     try:
-        url = f"https://www.worldsbk.com/en/results+statistics/ajax/get_results/{YEAR}/sbk"
-        req = urllib.request.Request(url, headers={
-            "Accept": "text/html,application/json",
-            "User-Agent": "Mozilla/5.0"
-        })
-        with urllib.request.urlopen(req, timeout=15) as resp:
-            body = resp.read().decode("utf-8", errors="replace")
-            # Tenta JSON primeiro
-            try:
-                data = json.loads(body)
-                if isinstance(data, list):
-                    for i, entry in enumerate(data[:10], 1):
-                        standings.append({
-                            "position": i,
-                            "rider": entry.get("rider", entry.get("name", "?")),
-                            "number": entry.get("number", 0),
-                            "country_iso": entry.get("country", ""),
-                            "team": entry.get("team", "?"),
-                            "points": entry.get("points", 0),
-                            "wins": entry.get("wins", 0),
-                        })
-            except (json.JSONDecodeError, ValueError):
-                # Tenta extrair de HTML (tabela de standings)
-                rows = re.findall(
-                    r'<tr[^>]*>.*?<td[^>]*>\s*(\d+)\s*</td>.*?'
-                    r'<td[^>]*>(.*?)</td>.*?'
-                    r'<td[^>]*>(\d+)\s*</td>.*?</tr>',
-                    body, re.DOTALL
-                )
-                for pos, rider_html, pts in rows[:10]:
-                    rider = re.sub(r'<[^>]+>', '', rider_html).strip()
-                    standings.append({
-                        "position": int(pos),
-                        "rider": rider,
-                        "number": 0,
-                        "country_iso": "",
-                        "team": "",
-                        "points": int(pts),
-                        "wins": 0,
-                    })
+        data = _sbk_get(
+            f"/wsbk-results/v1/seasons/{YEAR}/categories/SBK/riders/standings"
+        )
+        rider_cache, team_cache = {}, {}
+        for r in data.get("data", [])[:10]:
+            a = r.get("attributes", {})
+            rel = r.get("relationships", {})
+            rid = (rel.get("rider", {}).get("data") or {}).get("id")
+            tid = (rel.get("team", {}).get("data") or {}).get("id")
+            name, iso = "?", ""
+            if rid is not None:
+                if rid not in rider_cache:
+                    try:
+                        ra = _sbk_get(f"/wsbk-riders/v1/riders/{rid}")["data"]["attributes"]
+                        nm = f"{ra.get('name', '')} {ra.get('surname', '')}".strip()
+                        rider_cache[rid] = (nm or "?", _SBK_ISO3.get(ra.get("country_iso", ""), ""))
+                    except Exception:
+                        rider_cache[rid] = ("?", "")
+                name, iso = rider_cache[rid]
+            team = ""
+            if tid is not None:
+                if tid not in team_cache:
+                    try:
+                        team_cache[tid] = _sbk_get(
+                            f"/wsbk-riders/v1/teams/{tid}"
+                        )["data"]["attributes"].get("name", "")
+                    except Exception:
+                        team_cache[tid] = ""
+                team = team_cache[tid]
+            standings.append({
+                "position": a.get("position", 0),
+                "rider": name,
+                "number": a.get("number", 0),
+                "country_iso": iso,
+                "team": team,
+                "points": a.get("points", 0),
+                "wins": 0,
+            })
     except Exception as e:
-        print(f"  [SBK] Não foi possível obter standings: {e}")
+        print(f"  [SBK] Nao foi possivel obter standings: {e}")
     return standings
 
 

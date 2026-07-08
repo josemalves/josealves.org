@@ -1,28 +1,28 @@
 {
   "season": 2026,
-  "updated": "2026-06-11",
+  "updated": "2026-07-08",
   "standings": [
     {
       "position": 1,
-      "rider": "Marco Bezzecchi",
-      "number": 72,
-      "country_iso": "IT",
-      "team": "Aprilia Racing",
-      "constructor": "Aprilia",
-      "points": 180,
-      "wins": 4,
-      "podiums": 6
-    },
-    {
-      "position": 2,
       "rider": "Jorge Martin",
       "number": 89,
       "country_iso": "ES",
       "team": "Aprilia Racing",
       "constructor": "Aprilia",
-      "points": 160,
+      "points": 193,
       "wins": 1,
-      "podiums": 4
+      "podiums": 5
+    },
+    {
+      "position": 2,
+      "rider": "Marco Bezzecchi",
+      "number": 72,
+      "country_iso": "IT",
+      "team": "Aprilia Racing",
+      "constructor": "Aprilia",
+      "points": 186,
+      "wins": 4,
+      "podiums": 6
     },
     {
       "position": 3,
@@ -31,19 +31,19 @@
       "country_iso": "IT",
       "team": "Pertamina Enduro VR46 Racing Team",
       "constructor": "Ducati",
-      "points": 138,
+      "points": 177,
       "wins": 1,
       "podiums": 3
     },
     {
       "position": 4,
-      "rider": "Pedro Acosta",
-      "number": 37,
-      "country_iso": "ES",
-      "team": "Red Bull KTM Factory Racing",
-      "constructor": "KTM",
-      "points": 132,
-      "wins": 0,
+      "rider": "Ai Ogura",
+      "number": 79,
+      "country_iso": "JP",
+      "team": "SuperFile Trackhouse MotoGP Team",
+      "constructor": "Aprilia",
+      "points": 168,
+      "wins": 1,
       "podiums": 3
     },
     {
@@ -53,42 +53,42 @@
       "country_iso": "ES",
       "team": "Ducati Lenovo Team",
       "constructor": "Ducati",
-      "points": 108,
-      "wins": 1,
-      "podiums": 1
+      "points": 153,
+      "wins": 2,
+      "podiums": 2
     },
     {
       "position": 6,
-      "rider": "Ai Ogura",
-      "number": 79,
-      "country_iso": "JP",
-      "team": "SuperFile Trackhouse MotoGP Team",
-      "constructor": "Aprilia",
-      "points": 105,
-      "wins": 0,
-      "podiums": 1
-    },
-    {
-      "position": 7,
-      "rider": "Francesco Bagnaia",
-      "number": 63,
-      "country_iso": "IT",
-      "team": "Ducati Lenovo Team",
-      "constructor": "Ducati",
-      "points": 99,
-      "wins": 0,
-      "podiums": 3
-    },
-    {
-      "position": 8,
       "rider": "Raul Fernandez",
       "number": 25,
       "country_iso": "ES",
       "team": "SuperFile Trackhouse MotoGP Team",
       "constructor": "Aprilia",
-      "points": 93,
+      "points": 138,
       "wins": 0,
-      "podiums": 1
+      "podiums": 2
+    },
+    {
+      "position": 7,
+      "rider": "Pedro Acosta",
+      "number": 37,
+      "country_iso": "ES",
+      "team": "Red Bull KTM Factory Racing",
+      "constructor": "KTM",
+      "points": 133,
+      "wins": 0,
+      "podiums": 3
+    },
+    {
+      "position": 8,
+      "rider": "Francesco Bagnaia",
+      "number": 63,
+      "country_iso": "IT",
+      "team": "Ducati Lenovo Team",
+      "constructor": "Ducati",
+      "points": 130,
+      "wins": 0,
+      "podiums": 4
     },
     {
       "position": 9,
@@ -97,7 +97,7 @@
       "country_iso": "ES",
       "team": "BK8 Gresini Racing MotoGP",
       "constructor": "Ducati",
-      "points": 67,
+      "points": 78,
       "wins": 1,
       "podiums": 1
     },
@@ -108,7 +108,7 @@
       "country_iso": "ES",
       "team": "BK8 Gresini Racing MotoGP",
       "constructor": "Ducati",
-      "points": 64,
+      "points": 76,
       "wins": 0,
       "podiums": 1
     }
@@ -206,12 +206,12 @@
       "name": "MONSTER ENERGY GRAND PRIX OF CZECHIA ",
       "short_name": "CZE",
       "circuit": "Brno",
-      "circuit_name": "Automotodrom Brno",
+      "circuit_name": "CREDITAS Autodrom Brno",
       "country_iso": "CZ",
       "country_name": "Czechia",
       "date_start": "2026-06-19",
       "date_end": "2026-06-21",
-      "finished": false
+      "finished": true
     },
     {
       "name": "TISSOT GRAND PRIX OF THE NETHERLANDS ",
@@ -222,10 +222,10 @@
       "country_name": "Netherlands",
       "date_start": "2026-06-26",
       "date_end": "2026-06-28",
-      "finished": false
+      "finished": true
     },
     {
-      "name": "Liqui Moly Grand Prix of Germany",
+      "name": "LIQUI MOLY GRAND PRIX OF GERMANY ",
       "short_name": "GER",
       "circuit": "Sachsenring",
       "circuit_name": "Sachsenring",
@@ -247,7 +247,7 @@
       "finished": false
     },
     {
-      "name": "GRAND PRIX OF ARAGON ",
+      "name": "MICHELIN® GRAND PRIX OF ARAGON ",
       "short_name": "ARA",
       "circuit": "Alcañiz",
       "circuit_name": "MotorLand Aragón",
@@ -302,7 +302,7 @@
       "finished": false
     },
     {
-      "name": "Grand Prix of Australia",
+      "name": "GRAND PRIX OF AUSTRALIA ",
       "short_name": "AUS",
       "circuit": "Phillip Island",
       "circuit_name": "Phillip Island",
@@ -361,92 +361,92 @@
     "standings": [
       {
         "position": 1,
-        "rider": "Nicolò Bulega",
+        "rider": "Nicolo Bulega",
         "number": 11,
-        "country_iso": "IT",
+        "country_iso": "it",
         "team": "Aruba.it Racing - Ducati",
-        "points": 372,
-        "wins": 18
+        "points": 434,
+        "wins": 0
       },
       {
         "position": 2,
         "rider": "Iker Lecuona",
         "number": 7,
-        "country_iso": "ES",
+        "country_iso": "es",
         "team": "Aruba.it Racing - Ducati",
-        "points": 264,
+        "points": 313,
         "wins": 0
       },
       {
         "position": 3,
-        "rider": "Sam Lowes",
-        "number": 14,
-        "country_iso": "GB",
-        "team": "Elf Marc VDS Racing Team",
-        "points": 142,
+        "rider": "Yari Montella",
+        "number": 5,
+        "country_iso": "it",
+        "team": "Barni Spark Racing Team",
+        "points": 170,
         "wins": 0
       },
       {
         "position": 4,
         "rider": "Alex Lowes",
         "number": 22,
-        "country_iso": "GB",
-        "team": "Bimota by Kawasaki Racing Team",
-        "points": 132,
+        "country_iso": "gb",
+        "team": "bimota by Kawasaki Racing Team",
+        "points": 156,
         "wins": 0
       },
       {
         "position": 5,
-        "rider": "Yari Montella",
-        "number": 5,
-        "country_iso": "IT",
-        "team": "Barni Spark Racing Team",
-        "points": 131,
+        "rider": "Sam Lowes",
+        "number": 14,
+        "country_iso": "gb",
+        "team": "ELF Marc VDS Racing Team",
+        "points": 148,
         "wins": 0
       },
       {
         "position": 6,
-        "rider": "Lorenzo Baldassarri",
-        "number": 34,
-        "country_iso": "IT",
-        "team": "Team PATA GoEleven",
-        "points": 117,
+        "rider": "Axel Bassani",
+        "number": 47,
+        "country_iso": "it",
+        "team": "bimota by Kawasaki Racing Team",
+        "points": 128,
         "wins": 0
       },
       {
         "position": 7,
-        "rider": "Axel Bassani",
-        "number": 47,
-        "country_iso": "IT",
-        "team": "Bimota by Kawasaki Racing Team",
-        "points": 109,
+        "rider": "Lorenzo Baldassarri",
+        "number": 34,
+        "country_iso": "it",
+        "team": "Team Goeleven",
+        "points": 123,
         "wins": 0
       },
       {
         "position": 8,
-        "rider": "Álvaro Bautista",
+        "rider": "Alvaro Bautista",
         "number": 19,
-        "country_iso": "ES",
-        "team": "Superbike Advocates Racing",
-        "points": 92,
+        "country_iso": "es",
+        "team": "Barni Spark Racing Team",
+        "points": 99,
         "wins": 0
       },
       {
         "position": 9,
         "rider": "Miguel Oliveira",
         "number": 88,
-        "country_iso": "PT",
-        "team": "BMW Motorrad WorldSBK Team",
-        "points": 85,
+        "country_iso": "pt",
+        "team": "ROKiT BMW Motorrad WorldSBK Team",
+        "points": 97,
         "wins": 0
       },
       {
         "position": 10,
-        "rider": "Garrett Gerloff",
-        "number": 31,
-        "country_iso": "US",
-        "team": "Kawasaki WorldSBK Team",
-        "points": 85,
+        "rider": "Alberto Surra",
+        "number": 67,
+        "country_iso": "it",
+        "team": "Motocorsa Racing",
+        "points": 95,
         "wins": 0
       }
     ],
@@ -458,8 +458,7 @@
         "country_iso": "AU",
         "date_start": "2026-02-20",
         "date_end": "2026-02-22",
-        "finished": true,
-        "status": "finished"
+        "finished": true
       },
       {
         "round": 2,
@@ -468,8 +467,7 @@
         "country_iso": "PT",
         "date_start": "2026-03-27",
         "date_end": "2026-03-29",
-        "finished": true,
-        "status": "finished"
+        "finished": true
       },
       {
         "round": 3,
@@ -478,8 +476,7 @@
         "country_iso": "NL",
         "date_start": "2026-04-17",
         "date_end": "2026-04-19",
-        "finished": true,
-        "status": "finished"
+        "finished": true
       },
       {
         "round": 4,
@@ -488,8 +485,7 @@
         "country_iso": "HU",
         "date_start": "2026-05-01",
         "date_end": "2026-05-03",
-        "finished": true,
-        "status": "finished"
+        "finished": true
       },
       {
         "round": 5,
@@ -498,8 +494,7 @@
         "country_iso": "CZ",
         "date_start": "2026-05-15",
         "date_end": "2026-05-17",
-        "finished": true,
-        "status": "finished"
+        "finished": true
       },
       {
         "round": 6,
@@ -508,8 +503,7 @@
         "country_iso": "ES",
         "date_start": "2026-05-29",
         "date_end": "2026-05-31",
-        "finished": true,
-        "status": "finished"
+        "finished": true
       },
       {
         "round": 7,
@@ -518,8 +512,7 @@
         "country_iso": "SM",
         "date_start": "2026-06-12",
         "date_end": "2026-06-14",
-        "finished": false,
-        "status": "next"
+        "finished": true
       },
       {
         "round": 8,
@@ -528,8 +521,7 @@
         "country_iso": "GB",
         "date_start": "2026-07-10",
         "date_end": "2026-07-12",
-        "finished": false,
-        "status": "upcoming"
+        "finished": false
       },
       {
         "round": 9,
@@ -538,8 +530,7 @@
         "country_iso": "FR",
         "date_start": "2026-09-04",
         "date_end": "2026-09-06",
-        "finished": false,
-        "status": "upcoming"
+        "finished": false
       },
       {
         "round": 10,
@@ -548,8 +539,7 @@
         "country_iso": "IT",
         "date_start": "2026-09-25",
         "date_end": "2026-09-27",
-        "finished": false,
-        "status": "upcoming"
+        "finished": false
       },
       {
         "round": 11,
@@ -558,8 +548,7 @@
         "country_iso": "PT",
         "date_start": "2026-10-09",
         "date_end": "2026-10-11",
-        "finished": false,
-        "status": "upcoming"
+        "finished": false
       },
       {
         "round": 12,
@@ -568,10 +557,8 @@
         "country_iso": "ES",
         "date_start": "2026-10-16",
         "date_end": "2026-10-18",
-        "finished": false,
-        "status": "upcoming"
+        "finished": false
       }
-    ],
-    "updated": "2026-06-11"
+    ]
   }
 }
