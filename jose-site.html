@@ -2985,52 +2985,31 @@ footer {
     <div class="section-header reveal">
       <span class="section-tag">// Insert coin</span>
       <h2 class="section-title">Arcade Zone</h2>
-      <p class="section-subtitle">Jogos clássicos diretamente no browser</p>
+      <p class="section-subtitle">Homebrew livre, jogável diretamente no browser</p>
     </div>
 
     <div class="arcade-layout reveal">
       <!-- SIDEBAR -->
       <div class="arcade-sidebar">
-        <div class="arcade-game-item active" onclick="selectGame('pacman', this)">
-          <span class="game-icon">🟡</span>
+        <div class="arcade-game-item active" onclick="selectGame('alter_ego', this)">
+          <span class="game-icon">🧩</span>
           <div class="game-meta">
-            <h4>PAC-MAN</h4>
-            <span class="controls">NAMCO 1980</span>
+            <h4>ALTER EGO</h4>
+            <span class="controls">SHIRU · NES</span>
           </div>
         </div>
-        <div class="arcade-game-item" onclick="selectGame('bublbobl', this)">
-          <span class="game-icon">🫧</span>
+        <div class="arcade-game-item" onclick="selectGame('lan_master', this)">
+          <span class="game-icon">🔌</span>
           <div class="game-meta">
-            <h4>BUBBLE BOBBLE</h4>
-            <span class="controls">TAITO 1986</span>
+            <h4>LAN MASTER</h4>
+            <span class="controls">SHIRU · NES</span>
           </div>
         </div>
-        <div class="arcade-game-item" onclick="selectGame('pang', this)">
-          <span class="game-icon">🎯</span>
+        <div class="arcade-game-item" onclick="selectGame('zooming_secretary', this)">
+          <span class="game-icon">📞</span>
           <div class="game-meta">
-            <h4>PANG</h4>
-            <span class="controls">MITCHELL 1989</span>
-          </div>
-        </div>
-        <div class="arcade-game-item" onclick="selectGame('pbobblen', this)">
-          <span class="game-icon">🫧</span>
-          <div class="game-meta">
-            <h4>PUZZLE BOBBLE</h4>
-            <span class="controls">TAITO 1994</span>
-          </div>
-        </div>
-        <div class="arcade-game-item" onclick="selectGame('pbaction', this)">
-          <span class="game-icon">🎰</span>
-          <div class="game-meta">
-            <h4>PINBALL ACTION</h4>
-            <span class="controls">TEHKAN 1985</span>
-          </div>
-        </div>
-        <div class="arcade-game-item" onclick="selectGame('tnzs', this)">
-          <span class="game-icon">🥝</span>
-          <div class="game-meta">
-            <h4>NEWZEALAND STORY</h4>
-            <span class="controls">TAITO 1988</span>
+            <h4>ZOOMING SECRETARY</h4>
+            <span class="controls">SHIRU &amp; PINWIZZ · NES</span>
           </div>
         </div>
       </div>
@@ -3042,6 +3021,12 @@ footer {
         </div>
       </div>
     </div>
+
+    <p class="arcade-credits" style="text-align:center;color:var(--text-secondary);font-size:0.85rem;margin-top:1rem;line-height:1.6">
+      Jogos homebrew gratuitos de <a href="https://shiru.untergrund.net" target="_blank" rel="noopener" style="color:var(--accent-cyan)">Shiru</a>
+      (Zooming Secretary em co-autoria com PinWizz; Alter Ego baseado no original de Denis Grachev).
+      Usados ao abrigo das respetivas licenças freeware / Creative Commons.
+    </p>
 
     <!-- Arcade Build Photos -->
     <div class="arcade-builds reveal">
@@ -3486,8 +3471,8 @@ function loadArcadeGame(game) {
   wrapper.appendChild(div);
   // Configure EmulatorJS
   window.EJS_player = '#game';
-  window.EJS_core = 'arcade';
-  window.EJS_gameUrl = 'roms/' + game + '.zip';
+  window.EJS_core = 'nes';
+  window.EJS_gameUrl = 'games/' + game + '.nes';
   window.EJS_pathtodata = 'https://cdn.emulatorjs.org/stable/data/';
   window.EJS_color = '#e10600';
   window.EJS_startOnLoaded = false;
