@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Windows: Limpar e Otimizar Sem Instalar Nada | Dicas IT — José Alves</title>
+<meta name="description" content="Ferramentas e comandos nativos para manter o Windows limpo e rápido: cleanmgr, dfrgui, sfc /scannow e DISM. Sem otimizadores duvidosos. Guia de José Alves.">
+<link rel="canonical" href="https://www.josealves.org/dicas/windows-otimizar.html">
+<meta name="robots" content="index, follow">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Windows: Limpar e Otimizar Sem Instalar Nada | José Alves">
+<meta property="og:description" content="Comandos e ferramentas nativas do Windows para o manter limpo e rápido — sem programas 'mágicos'.">
+<meta property="og:image" content="https://www.josealves.org/og-image.jpg">
+<meta property="og:url" content="https://www.josealves.org/dicas/windows-otimizar.html">
+<link rel="icon" type="image/svg+xml" href="../favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700&family=Rajdhani:wght@400;500;600;700&family=Space+Mono&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="dicas.css">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Article","headline":"Windows: Limpar e Otimizar Sem Instalar Nada","author":{"@type":"Person","name":"José Alves","url":"https://www.josealves.org"},"publisher":{"@type":"Person","name":"José Alves"},"mainEntityOfPage":"https://www.josealves.org/dicas/windows-otimizar.html","inLanguage":"pt-PT","image":"https://www.josealves.org/og-image.jpg"}
+</script>
+</head>
+<body>
+<div class="topbar">
+  <a class="brand" href="../">JOSÉ<span>.</span>DEV</a>
+  <a class="back" href="../#tips">← Todas as dicas</a>
+</div>
+<main class="wrap">
+  <nav class="breadcrumb"><a href="../">Início</a> / <a href="../#tips">Dicas IT</a> / Windows: Limpar e Otimizar</nav>
+  <span class="eyebrow">// Software</span>
+  <h1>💻 Windows: Limpar e Otimizar</h1>
+  <article>
+    <p>Não precisas de instalar programas "mágicos" de otimização. O Windows tem tudo o que precisas:</p>
+    <p><strong>Limpeza de disco:</strong> digita <code>cleanmgr</code> no menu iniciar. Seleciona "Limpar ficheiros de sistema" para libertar ainda mais espaço.</p>
+    <p><strong>Desfragmentação (só HDD):</strong> digita <code>dfrgui</code>. Se tens SSD, o Windows já faz TRIM automaticamente — não desfragmentes SSDs!</p>
+    <p><strong>Verificar integridade do sistema:</strong> abre o Command Prompt como administrador e executa <code>sfc /scannow</code> seguido de <code>DISM /Online /Cleanup-Image /RestoreHealth</code>.</p>
+    <div class="warning-box">
+      <p>⚠️ Nunca instales "otimizadores" ou "limpadores de registo". Na maioria dos casos fazem mais mal que bem e podem conter malware.</p>
+    </div>
+    <p><strong>Windows Update:</strong> mantém sempre o sistema atualizado. As atualizações corrigem vulnerabilidades de segurança críticas.</p>
+  </article>
+  <div class="cta">
+    <p>Precisa de formação em IT, redes ou cibersegurança na zona do Porto / Vila Nova de Gaia?</p>
+    <a class="btn" href="../#contact">Falar com o José →</a>
+  </div>
+  <nav class="more">
+    <h2>Mais dicas</h2>
+    <a href="pc-lento.html">🔧 PC lento? Diagnóstico rápido em 5 passos</a>
+    <a href="passwords-seguras.html">🔒 Passwords seguras em 2026</a>
+    <a href="montar-pc.html">🖥️ Montar um PC: guia essencial</a>
+  </nav>
+</main>
+<footer>© 2026 José Alves · <a href="../">josealves.org</a></footer>
+</body>
+</html>
