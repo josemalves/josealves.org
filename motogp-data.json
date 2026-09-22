@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-07-08",
+  "updated": "2026-09-21",
   "standings": [
     {
       "position": 1,
@@ -9,97 +9,97 @@
       "country_iso": "ES",
       "team": "Aprilia Racing",
       "constructor": "Aprilia",
-      "points": 193,
+      "points": 306,
       "wins": 1,
-      "podiums": 5
+      "podiums": 7
     },
     {
       "position": 2,
-      "rider": "Marco Bezzecchi",
-      "number": 72,
-      "country_iso": "IT",
-      "team": "Aprilia Racing",
-      "constructor": "Aprilia",
-      "points": 186,
-      "wins": 4,
-      "podiums": 6
-    },
-    {
-      "position": 3,
-      "rider": "Fabio Di Giannantonio",
-      "number": 49,
-      "country_iso": "IT",
-      "team": "Pertamina Enduro VR46 Racing Team",
-      "constructor": "Ducati",
-      "points": 177,
-      "wins": 1,
-      "podiums": 3
-    },
-    {
-      "position": 4,
-      "rider": "Ai Ogura",
-      "number": 79,
-      "country_iso": "JP",
-      "team": "SuperFile Trackhouse MotoGP Team",
-      "constructor": "Aprilia",
-      "points": 168,
-      "wins": 1,
-      "podiums": 3
-    },
-    {
-      "position": 5,
       "rider": "Marc Marquez",
       "number": 93,
       "country_iso": "ES",
       "team": "Ducati Lenovo Team",
       "constructor": "Ducati",
-      "points": 153,
-      "wins": 2,
-      "podiums": 2
+      "points": 294,
+      "wins": 5,
+      "podiums": 5
     },
     {
-      "position": 6,
-      "rider": "Raul Fernandez",
-      "number": 25,
-      "country_iso": "ES",
-      "team": "SuperFile Trackhouse MotoGP Team",
+      "position": 3,
+      "rider": "Marco Bezzecchi",
+      "number": 72,
+      "country_iso": "IT",
+      "team": "Aprilia Racing",
       "constructor": "Aprilia",
-      "points": 138,
-      "wins": 0,
-      "podiums": 2
+      "points": 264,
+      "wins": 4,
+      "podiums": 9
     },
     {
-      "position": 7,
+      "position": 4,
       "rider": "Pedro Acosta",
       "number": 37,
       "country_iso": "ES",
       "team": "Red Bull KTM Factory Racing",
       "constructor": "KTM",
-      "points": 133,
-      "wins": 0,
+      "points": 234,
+      "wins": 1,
+      "podiums": 6
+    },
+    {
+      "position": 5,
+      "rider": "Fabio Di Giannantonio",
+      "number": 49,
+      "country_iso": "IT",
+      "team": "Pertamina Enduro VR46 Racing Team",
+      "constructor": "Ducati",
+      "points": 230,
+      "wins": 1,
       "podiums": 3
     },
     {
-      "position": 8,
-      "rider": "Francesco Bagnaia",
-      "number": 63,
-      "country_iso": "IT",
-      "team": "Ducati Lenovo Team",
-      "constructor": "Ducati",
-      "points": 130,
-      "wins": 0,
+      "position": 6,
+      "rider": "Ai Ogura",
+      "number": 79,
+      "country_iso": "JP",
+      "team": "SuperFile Trackhouse MotoGP Team",
+      "constructor": "Aprilia",
+      "points": 222,
+      "wins": 1,
       "podiums": 4
     },
     {
-      "position": 9,
+      "position": 7,
+      "rider": "Raul Fernandez",
+      "number": 25,
+      "country_iso": "ES",
+      "team": "SuperFile Trackhouse MotoGP Team",
+      "constructor": "Aprilia",
+      "points": 203,
+      "wins": 1,
+      "podiums": 4
+    },
+    {
+      "position": 8,
       "rider": "Alex Marquez",
       "number": 73,
       "country_iso": "ES",
       "team": "BK8 Gresini Racing MotoGP",
       "constructor": "Ducati",
-      "points": 78,
+      "points": 158,
       "wins": 1,
-      "podiums": 1
+      "podiums": 2
+    },
+    {
+      "position": 9,
+      "rider": "Francesco Bagnaia",
+      "number": 63,
+      "country_iso": "IT",
+      "team": "Ducati Lenovo Team",
+      "constructor": "Ducati",
+      "points": 156,
+      "wins": 0,
+      "podiums": 4
     },
     {
       "position": 10,
@@ -108,7 +108,7 @@
       "country_iso": "ES",
       "team": "BK8 Gresini Racing MotoGP",
       "constructor": "Ducati",
-      "points": 76,
+      "points": 115,
       "wins": 0,
       "podiums": 1
     }
@@ -233,7 +233,7 @@
       "country_name": "Germany",
       "date_start": "2026-07-10",
       "date_end": "2026-07-12",
-      "finished": false
+      "finished": true
     },
     {
       "name": "QATAR AIRWAYS GRAND PRIX OF GREAT BRITAIN ",
@@ -244,7 +244,7 @@
       "country_name": "United Kingdom of Great Britain and Northern Ireland",
       "date_start": "2026-08-07",
       "date_end": "2026-08-09",
-      "finished": false
+      "finished": true
     },
     {
       "name": "MICHELIN® GRAND PRIX OF ARAGON ",
@@ -255,10 +255,10 @@
       "country_name": "Spain",
       "date_start": "2026-08-28",
       "date_end": "2026-08-30",
-      "finished": false
+      "finished": true
     },
     {
-      "name": "Red Bull Grand Prix of San Marino and The Rimini Riviera",
+      "name": "RED BULL GRAND PRIX OF SAN MARINO AND THE RIMINI RIVIERA ",
       "short_name": "RSM",
       "circuit": "Misano Adriatico",
       "circuit_name": "Misano World Circuit Marco Simoncelli",
@@ -266,10 +266,10 @@
       "country_name": "San Marino",
       "date_start": "2026-09-11",
       "date_end": "2026-09-13",
-      "finished": false
+      "finished": true
     },
     {
-      "name": "GRAND PRIX OF AUSTRIA ",
+      "name": "QATAR AIRWAYS GRAND PRIX OF AUSTRIA ",
       "short_name": "AUT",
       "circuit": "Spielberg",
       "circuit_name": "Red Bull Ring - Spielberg",
@@ -277,7 +277,7 @@
       "country_name": "Austria",
       "date_start": "2026-09-18",
       "date_end": "2026-09-20",
-      "finished": false
+      "finished": true
     },
     {
       "name": "Motul Grand Prix of Japan",
@@ -365,7 +365,7 @@
         "number": 11,
         "country_iso": "it",
         "team": "Aruba.it Racing - Ducati",
-        "points": 434,
+        "points": 553,
         "wins": 0
       },
       {
@@ -374,7 +374,7 @@
         "number": 7,
         "country_iso": "es",
         "team": "Aruba.it Racing - Ducati",
-        "points": 313,
+        "points": 407,
         "wins": 0
       },
       {
@@ -383,7 +383,7 @@
         "number": 5,
         "country_iso": "it",
         "team": "Barni Spark Racing Team",
-        "points": 170,
+        "points": 247,
         "wins": 0
       },
       {
@@ -392,7 +392,7 @@
         "number": 22,
         "country_iso": "gb",
         "team": "bimota by Kawasaki Racing Team",
-        "points": 156,
+        "points": 201,
         "wins": 0
       },
       {
@@ -401,52 +401,52 @@
         "number": 14,
         "country_iso": "gb",
         "team": "ELF Marc VDS Racing Team",
-        "points": 148,
+        "points": 198,
         "wins": 0
       },
       {
         "position": 6,
-        "rider": "Axel Bassani",
-        "number": 47,
-        "country_iso": "it",
-        "team": "bimota by Kawasaki Racing Team",
-        "points": 128,
-        "wins": 0
-      },
-      {
-        "position": 7,
         "rider": "Lorenzo Baldassarri",
         "number": 34,
         "country_iso": "it",
         "team": "Team Goeleven",
-        "points": 123,
+        "points": 171,
+        "wins": 0
+      },
+      {
+        "position": 7,
+        "rider": "Axel Bassani",
+        "number": 47,
+        "country_iso": "it",
+        "team": "bimota by Kawasaki Racing Team",
+        "points": 169,
         "wins": 0
       },
       {
         "position": 8,
-        "rider": "Alvaro Bautista",
-        "number": 19,
-        "country_iso": "es",
-        "team": "Barni Spark Racing Team",
-        "points": 99,
+        "rider": "Garrett Gerloff",
+        "number": 31,
+        "country_iso": "us",
+        "team": "Kawasaki WorldSBK Team",
+        "points": 126,
         "wins": 0
       },
       {
         "position": 9,
-        "rider": "Miguel Oliveira",
-        "number": 88,
-        "country_iso": "pt",
-        "team": "ROKiT BMW Motorrad WorldSBK Team",
-        "points": 97,
-        "wins": 0
-      },
-      {
-        "position": 10,
         "rider": "Alberto Surra",
         "number": 67,
         "country_iso": "it",
         "team": "Motocorsa Racing",
-        "points": 95,
+        "points": 120,
+        "wins": 0
+      },
+      {
+        "position": 10,
+        "rider": "Alvaro Bautista",
+        "number": 19,
+        "country_iso": "es",
+        "team": "Barni Spark Racing Team",
+        "points": 119,
         "wins": 0
       }
     ],
@@ -521,7 +521,7 @@
         "country_iso": "gb",
         "date_start": "2026-07-10",
         "date_end": "2026-07-12",
-        "finished": false
+        "finished": true
       },
       {
         "round": 9,
@@ -530,7 +530,7 @@
         "country_iso": "fr",
         "date_start": "2026-09-04",
         "date_end": "2026-09-06",
-        "finished": false
+        "finished": true
       },
       {
         "round": 10,
