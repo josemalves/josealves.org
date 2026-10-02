@@ -1,6 +1,6 @@
 {
   "season": 2026,
-  "updated": "2026-09-21",
+  "updated": "2026-09-30",
   "standings": [
     {
       "position": 1,
@@ -280,7 +280,7 @@
       "finished": true
     },
     {
-      "name": "Motul Grand Prix of Japan",
+      "name": "MOTUL GRAND PRIX OF JAPAN ",
       "short_name": "JPN",
       "circuit": "Motegi",
       "circuit_name": "Mobility Resort Motegi",
@@ -365,7 +365,7 @@
         "number": 11,
         "country_iso": "it",
         "team": "Aruba.it Racing - Ducati",
-        "points": 553,
+        "points": 602,
         "wins": 0
       },
       {
@@ -374,7 +374,7 @@
         "number": 7,
         "country_iso": "es",
         "team": "Aruba.it Racing - Ducati",
-        "points": 407,
+        "points": 469,
         "wins": 0
       },
       {
@@ -383,7 +383,7 @@
         "number": 5,
         "country_iso": "it",
         "team": "Barni Spark Racing Team",
-        "points": 247,
+        "points": 269,
         "wins": 0
       },
       {
@@ -392,7 +392,7 @@
         "number": 22,
         "country_iso": "gb",
         "team": "bimota by Kawasaki Racing Team",
-        "points": 201,
+        "points": 226,
         "wins": 0
       },
       {
@@ -401,7 +401,7 @@
         "number": 14,
         "country_iso": "gb",
         "team": "ELF Marc VDS Racing Team",
-        "points": 198,
+        "points": 219,
         "wins": 0
       },
       {
@@ -410,7 +410,7 @@
         "number": 34,
         "country_iso": "it",
         "team": "Team Goeleven",
-        "points": 171,
+        "points": 193,
         "wins": 0
       },
       {
@@ -419,7 +419,7 @@
         "number": 47,
         "country_iso": "it",
         "team": "bimota by Kawasaki Racing Team",
-        "points": 169,
+        "points": 184,
         "wins": 0
       },
       {
@@ -428,7 +428,7 @@
         "number": 31,
         "country_iso": "us",
         "team": "Kawasaki WorldSBK Team",
-        "points": 126,
+        "points": 145,
         "wins": 0
       },
       {
@@ -437,7 +437,7 @@
         "number": 67,
         "country_iso": "it",
         "team": "Motocorsa Racing",
-        "points": 120,
+        "points": 140,
         "wins": 0
       },
       {
@@ -446,7 +446,7 @@
         "number": 19,
         "country_iso": "es",
         "team": "Barni Spark Racing Team",
-        "points": 119,
+        "points": 125,
         "wins": 0
       }
     ],
@@ -539,7 +539,7 @@
         "country_iso": "it",
         "date_start": "2026-09-25",
         "date_end": "2026-09-27",
-        "finished": false
+        "finished": true
       },
       {
         "round": 11,
